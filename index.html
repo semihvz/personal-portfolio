@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Kişisel Portföy | Yazılım Geliştirici & Mühendis</title>
+  <meta name="description" content="Modern web uygulamaları, yapay zeka entegrasyonları ve yüksek performanslı dijital ürünler geliştiren Full-Stack Yazılım Geliştiricisi Kişisel Portföy Web Sitesi.">
+  <meta name="keywords" content="yazılım geliştirici, full stack developer, portfolio, web tasarımı, javascript, react, python, github pages">
+  <meta name="author" content="Geliştirici">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kişisel Portföy | Yazılım Geliştirici & Mühendis">
+  <meta property="og:description" content="Yüksek performanslı, modern ve ölçeklenebilir dijital çözümler üretiyorum. Projelerimi inceleyin.">
+  <meta property="og:image" content="assets/project1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-dot"></span> PORTFOLIO
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Hakkımda</a></li>
+        <li><a href="#skills" class="nav-link">Yetenekler</a></li>
+        <li><a href="#projects" class="nav-link">Projeler</a></li>
+        <li><a href="#experience" class="nav-link">Deneyim</a></li>
+        <li><a href="#contact" class="nav-link">İletişim</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" title="Karanlık/Aydınlık Tema">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="nav-btn">İletişime Geç</a>
+        <button class="hamburger" id="hamburger" aria-label="Menüyü Aç">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Menüyü Kapat">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="#about" class="nav-link mobile-link">Hakkımda</a>
+    <a href="#skills" class="nav-link mobile-link">Yetenekler</a>
+    <a href="#projects" class="nav-link mobile-link">Projeler</a>
+    <a href="#experience" class="nav-link mobile-link">Deneyim</a>
+    <a href="#contact" class="nav-link mobile-link">İletişim</a>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span> Yeni Fikirlere & Projelere Açık
+          </div>
+          
+          <h1 class="hero-title">
+            Merhaba, Ben <br>
+            <span class="gradient-text">Yazılım Mühendisi</span><br>
+            <span class="typewriter-wrapper" id="typewriter"></span>
+          </h1>
+
+          <p class="hero-description">
+            Modern web teknolojileri, yapay zeka mimarileri ve kullanıcı odaklı dijital ürünler tasarlıyorum. Karmaşık problemleri şık, hızlı ve güvenilir kodlar üreterek çözüyorum.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> Projelerimi İncele
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-regular fa-paper-plane"></i> Mesaj Gönder
+            </a>
+          </div>
+        </div>
+
+        <!-- Avatar Image Frame -->
+        <div class="hero-avatar-wrapper">
+          <div class="hero-avatar-glow"></div>
+          <div class="hero-avatar-card">
+            <img src="assets/avatar.jpg" alt="Profil Fotoğrafı" class="hero-avatar-img">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-1">
+            <i class="fa-brands fa-react" style="color: #61dafb;"></i>
+            <div>
+              <strong style="display:block; font-size:0.85rem;">Frontend Master</strong>
+              <small style="color:var(--text-muted); font-size:0.75rem;">React & Next.js</small>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-2">
+            <i class="fa-solid fa-brain" style="color: #a855f7;"></i>
+            <div>
+              <strong style="display:block; font-size:0.85rem;">AI Integration</strong>
+              <small style="color:var(--text-muted); font-size:0.75rem;">LLMs & Automation</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">// Biyografi</span>
+          <h2 class="section-title">Tutkuyla Kodluyor, <span class="gradient-text">Geleceği Tasarlıyorum</span></h2>
+          <p class="section-subtitle">Yazılım dünyasındaki yenilikleri yakından takip eden, temiz kod (clean code) prensiplerine sadık bir geliştiriciyim.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main);">Ben Kimim?</h3>
+            <p class="about-text">
+              Teknolojiye duyduğum merakla başlayan yazılım serüvenimde, günümüzün en güncel web ve mobil teknolojilerini kullanarak ölçeklenebilir uygulamalar geliştiriyorum. Kullanıcı deneyimini (UX) ön planda tutan mimariler kurmayı seviyorum.
+            </p>
+            <p class="about-text">
+              Frontend'de piksel hassasiyetinde arayüzler sunarken, Backend tarafında ise güvenli ve yüksek performanslı veri mimarileri inşa ediyorum.
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" id="stat-exp">4+</div>
+              <div class="stat-label">Yıl Deneyim</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" id="stat-projects">25+</div>
+              <div class="stat-label">Tamamlanan Proje</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" id="stat-clients">100%</div>
+              <div class="stat-label">Kod Kalitesi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">// Yetenek Havuzu</span>
+          <h2 class="section-title">Kullandığım <span class="gradient-text">Teknolojiler</span></h2>
+          <p class="section-subtitle">Fikirleri gerçeğe dönüştürmek için kullandığım anahtar araçlar ve diller.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & DB</button>
+          <button class="filter-btn" data-filter="tools">Araçlar & DevOps</button>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- Skill Cards (Populated by JS or Static HTML) -->
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-html5 skill-icon" style="color: #e34f26;"></i>
+            <div class="skill-name">HTML5 / CSS3</div>
+            <div class="skill-level">İleri Düzey</div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-js skill-icon" style="color: #f7df1e;"></i>
+            <div class="skill-name">JavaScript (ES6+)</div>
+            <div class="skill-level">İleri Düzey</div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-react skill-icon" style="color: #61dafb;"></i>
+            <div class="skill-name">React / Next.js</div>
+            <div class="skill-level">Uzman</div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <i class="fa-brands fa-vuejs skill-icon" style="color: #42b883;"></i>
+            <div class="skill-name">Vue.js</div>
+            <div class="skill-level">Orta - İleri</div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-brands fa-node-js skill-icon" style="color: #339933;"></i>
+            <div class="skill-name">Node.js / Express</div>
+            <div class="skill-level">İleri Düzey</div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-brands fa-python skill-icon" style="color: #3776ab;"></i>
+            <div class="skill-name">Python / FastAPI</div>
+            <div class="skill-level">İleri Düzey</div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <i class="fa-solid fa-database skill-icon" style="color: #4479a1;"></i>
+            <div class="skill-name">PostgreSQL / MongoDB</div>
+            <div class="skill-level">İleri Düzey</div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <i class="fa-brands fa-git-alt skill-icon" style="color: #f05032;"></i>
+            <div class="skill-name">Git & GitHub</div>
+            <div class="skill-level">Uzman</div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <i class="fa-brands fa-docker skill-icon" style="color: #2496ed;"></i>
+            <div class="skill-name">Docker</div>
+            <div class="skill-level">Orta Düzey</div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <i class="fa-solid fa-cloud skill-icon" style="color: #ff9900;"></i>
+            <div class="skill-name">AWS / Vercel</div>
+            <div class="skill-level">Orta - İleri</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">// Öne Çıkan Çalışmalar</span>
+          <h2 class="section-title">Son <span class="gradient-text">Projelerim</span></h2>
+          <p class="section-subtitle">Geliştirdiğim bazı özel ve açık kaynaklı uygulamalar.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/project1.jpg" alt="AI Analytics Platform" class="project-img">
+              <div class="project-overlay">
+                <button class="project-overlay-btn open-modal-btn" data-project="1" title="Detayları Gör">
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </button>
+                <a href="https://github.com" target="_blank" class="project-overlay-btn" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AI Powered Analytics Dashboard</h3>
+              <p class="project-desc">Gerçek zamanlı veri akışı ve makine öğrenmesi tahmin modelleri sunan modern paneller dizisi.</p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Chart.js</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/project2.jpg" alt="AURA E-Commerce Platform" class="project-img">
+              <div class="project-overlay">
+                <button class="project-overlay-btn open-modal-btn" data-project="2" title="Detayları Gör">
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </button>
+                <a href="https://github.com" target="_blank" class="project-overlay-btn" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AURA Modern E-Ticaret Platformu</h3>
+              <p class="project-desc">Lüks ürün koleksiyonları için tasarlanmış, glassmorphism efektli ve hızlı ödeme altyapılı e-ticaret çözümü.</p>
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">Tailwind</span>
+                <span class="project-tag">Stripe API</span>
+                <span class="project-tag">Node.js</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/project3.jpg" alt="Neo Finance Crypto App" class="project-img">
+              <div class="project-overlay">
+                <button class="project-overlay-btn open-modal-btn" data-project="3" title="Detayları Gör">
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </button>
+                <a href="https://github.com" target="_blank" class="project-overlay-btn" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Neo Finance Portföy Takip Mobil Uygulaması</h3>
+              <p class="project-desc">Kripto varlıkları ve finansal portföyleri anlık canlı grafiklerle takip etmeyi sağlayan mobil uygulama.</p>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">WebSockets</span>
+                <span class="project-tag">Redux</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Timeline Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">// Kariyer Yolculuğu</span>
+          <h2 class="section-title">Deneyim & <span class="gradient-text">Eğitim</span></h2>
+          <p class="section-subtitle">Profesyonel geçmişim ve aldığım eğitimler.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2023 - GÜNÜMÜZ</div>
+              <h3 class="timeline-role">Kıdemli Full-Stack Geliştirici</h3>
+              <div class="timeline-company">TechNova Solutions</div>
+              <p class="timeline-desc">Yüksek ölçekli mikroservis mimarilerinin geliştirilmesi, ön yüz performans optimizasyonları ve ekip liderliği.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2021 - 2023</div>
+              <h3 class="timeline-role">Frontend Mühendisi</h3>
+              <div class="timeline-company">CyberPulse Interactive</div>
+              <p class="timeline-desc">React ve TypeScript ile kullanıcı dostu arayüzlerin tasarlanması, WebGL tabanlı etkileşimli bileşenlerin geliştirilmesi.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2017 - 2021</div>
+              <h3 class="timeline-role">Yazılım Mühendisliği (Lisans)</h3>
+              <div class="timeline-company">Teknik Üniversite</div>
+              <p class="timeline-desc">Veri Yapıları, Algoritmalar, Yazılım Mimarisi ve Yapay Zeka Temelleri üzerine lisans eğitimi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">// İletişime Geç</span>
+          <h2 class="section-title">Birlikte Harika Projeler <span class="gradient-text">Üretelim</span></h2>
+          <p class="section-subtitle">Sorularınız, iş teklifleri veya sadece kahve sohbeti için bana ulaşabilirsiniz.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem;">İletişim Bilgileri</h3>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <div class="contact-label">E-Posta</div>
+                <a href="mailto:ornek.geliştirici@gmail.com" class="contact-value" id="copy-email">ornek.geliştirici@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="contact-label">Konum</div>
+                <div class="contact-value">İstanbul / Türkiye (Uzaktan / Remote)</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-globe"></i></div>
+              <div>
+                <div class="contact-label">Durum</div>
+                <div class="contact-value" style="color: var(--accent-green);">● Freelance & Tam Zamanlı Tekliflere Açık</div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://twitter.com" target="_blank" class="social-btn" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://medium.com" target="_blank" class="social-btn" title="Medium"><i class="fa-brands fa-medium"></i></a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Adınız Soyadınız</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Ahmet Yılmaz" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">E-Posta Adresiniz</label>
+              <input type="email" id="form-email" class="form-input" placeholder="ahmet@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Mesajınız</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Projeniz hakkında detaylar..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Mesajı Gönder
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#hero" class="back-to-top" title="Yukarı Çık">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+      <p>© <span id="year"></span> Tüm Hakları Saklıdır. Designed & Built with ❤️ for GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modal-content">
+        <!-- Dynamic content filled via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check" style="color: var(--accent-green); font-size: 1.3rem;"></i>
+    <span id="toast-message">Mesajınız başarıyla iletildi!</span>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
