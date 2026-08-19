@@ -1,16 +1,17 @@
 /* ==========================================================================
-   PORTFOLIO INTERACTIVE LOGIC
+   INDUSTRIAL ENGINEERING PORTFOLIO INTERACTIVE LOGIC
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. TYPEWRITER EFFECT
+  // 1. TYPEWRITER EFFECT (Industrial Engineering Focus)
   const typewriterElement = document.getElementById('typewriter');
   const titles = [
-    "Full-Stack Geliştirici",
-    "Yapay Zeka Mimarı",
-    "UI/UX Tutkunu",
-    "Açık Kaynak Katkıcısı"
+    "Endüstri Mühendisi",
+    "Talep Planlama Uzmanı",
+    "Üretim Planlama & Çizelgeleme",
+    "Tedarik Zinciri & S&OP Uzmanı",
+    "Stok Optimizasyon Mimarı"
   ];
   let titleIndex = 0;
   let charIndex = 0;
@@ -23,20 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isDeleting) {
       typewriterElement.textContent = currentTitle.substring(0, charIndex - 1);
       charIndex--;
-      typeSpeed = 50;
+      typeSpeed = 40;
     } else {
       typewriterElement.textContent = currentTitle.substring(0, charIndex + 1);
       charIndex++;
-      typeSpeed = 100;
+      typeSpeed = 90;
     }
 
     if (!isDeleting && charIndex === currentTitle.length) {
       isDeleting = true;
-      typeSpeed = 2000; // Pause at top
+      typeSpeed = 2200; // Duraksama
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       titleIndex = (titleIndex + 1) % titles.length;
-      typeSpeed = 500;
+      typeSpeed = 400;
     }
 
     setTimeout(typeEffect, typeSpeed);
@@ -103,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < 120) {
-          ctx.strokeStyle = `rgba(168, 85, 247, ${0.15 * (1 - dist / 120)})`;
+          ctx.strokeStyle = `rgba(16, 185, 129, ${0.15 * (1 - dist / 120)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
@@ -196,49 +197,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. PROJECT DETAILS MODAL
+  // 7. PROJECT DETAILS MODAL (Industrial Engineering Projects)
   const projectData = {
     "1": {
-      title: "AI Powered Analytics Dashboard",
+      title: "Yapay Zeka Destekli Talep Tahmini & Stok Optimizasyon Modeli",
       image: "assets/project1.jpg",
-      description: "Bu proje, kurumsal şirketlerin büyük veri akışlarını anlık olarak izlemelerine ve makine öğrenmesi modelleriyle gelecek tahminleri üretmelerine imkan tanıyan yüksek performanslı bir veri analitiği platformudur.",
+      description: "Bu proje, hızlı tüketim ve üretim sektörlerinde geçmiş satış verilerini, mevsimsellik eğilimlerini ve kampanya etkilerini analiz ederek SKU bazında 12 aylık talep tahminleri üretir. Aynı zamanda hedeflenen hizmet seviyesine (Service Level %98) göre optimal güvenlik stoğunu (Safety Stock) ve Yeniden Sipariş Noktalarını (ROP) otomatik hesaplar.",
       features: [
-        "Reel-time veri akışı ve anomali tespiti",
-        "Özelleştirilebilir grafik panelleri (Chart.js / D3.js)",
-        "FastAPI ile geliştirilmiş mikroservis mimarisi",
-        "Koyu/Aydınlık tema desteği ve yüksek erişilebilirlik"
+        "Prophet, ARIMA ve XGBoost algoritmalarıyla zaman serisi tahmini",
+        "Kötü stok (Dead Stock) ve Stoksuz Kalma (Stockout) risk ikaz sistemi",
+        "Tahmin Doğruluğu (MAPE / WAPE) izleme paneli",
+        "ERP (SAP/Oracle) ile çift yönlü veri entegrasyonu"
       ],
-      tech: ["React", "Python", "FastAPI", "PostgreSQL", "Docker"],
-      demo: "https://example.com",
-      github: "https://github.com"
+      tech: ["Python", "Prophet", "XGBoost", "Pandas", "Stok Teorisi"],
+      demo: "https://github.com/semihvz",
+      github: "https://github.com/semihvz"
     },
     "2": {
-      title: "AURA Modern E-Ticaret Platformu",
+      title: "İleri Üretim Çizelgeleme & Hat Dengeleme Motoru (APS)",
       image: "assets/project2.jpg",
-      description: "AURA, lüks tüketim ürünleri satan markalar için özel hazırlanmış, şık glassmorphism tasarımı ve ultra hızlı sayfa geçişleri sunan Next.js tabanlı e-ticaret çözümüdür.",
+      description: "Çok makineli ve çok ürünlü imalat tesislerinde makine kurulum (SMED) sürelerini minimize eden, teslim tarihlerine (Due Date) uyumu maksimuma çıkaran ve makine iş yüklerini en uygun şekilde dengeleyen Karma Tam Sayılı Doğrusal Programlama (MILP) tabanlı çizelgeleme yazılımı.",
       features: [
-        "Stripe ve Iyzico entegrasyonlu güvenli ödeme",
-        "Kategori filtreleme, sepet ve favoriler yönetimi",
-        "SEO ve Core Web Vitals 100/100 skor başarımı",
-        "Headless CMS entegrasyonu (Sanity / Strapi)"
+        "Dinamik Gantt Şeması görünümü ve Sürükle-Bırak düzenleme",
+        "Makine bazlı OEE ve darboğaz (Bottleneck) tespiti",
+        "Gurobi & PuLP çözücüleri ile matematiksel optimizasyon",
+        "Gecikme sürelerini (Tardiness) sıfırlayan akıllı sıralama"
       ],
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe API"],
-      demo: "https://example.com",
-      github: "https://github.com"
+      tech: ["Gurobi / CPLEX", "PuLP", "Python", "Gantt Engine"],
+      demo: "https://github.com/semihvz",
+      github: "https://github.com/semihvz"
     },
     "3": {
-      title: "Neo Finance Portföy Takip Mobil Uygulaması",
+      title: "End-to-End Tedarik Zinciri & S&OP Yönetim Paneli",
       image: "assets/project3.jpg",
-      description: "Kripto varlıkların, hisse senetlerinin ve emtiaların tek bir ekrandan anlık olarak izlenmesini sağlayan mobil portföy yönetim uygulaması.",
+      description: "Satış, Üretim, Satın Alma ve Finans bölümlerinin tek bir doğruluk kaynağı üzerinden iletişim kurmasını sağlayan Satış ve Operasyon Planlaması (S&OP) kontrol kulesi.",
       features: [
-        "WebSocket bağlantısıyla milisaniyelik fiyat güncellemeleri",
-        "Biyometrik doğrulama (FaceID / Fingerprint)",
-        "Kar / Zarar analiz raporları ve bildirimler",
-        "Çoklu para birimi desteği (USD, EUR, TRY)"
+        "Uçtan uca tedarik süresi (Lead Time) ve tedarikçi performans izleme",
+        "Stok devir hızı (Inventory Turnover) ve elde tutma maliyet hesapları",
+        "Senaryo analizi (What-If Analysis) ile kapasite simülasyonu",
+        "Power BI ve SQL tabanlı canlı veri entegrasyonu"
       ],
-      tech: ["React Native", "Redux Toolkit", "WebSockets", "Node.js"],
-      demo: "https://example.com",
-      github: "https://github.com"
+      tech: ["Power BI", "SQL", "S&OP Process", "SAP PP"],
+      demo: "https://github.com/semihvz",
+      github: "https://github.com/semihvz"
     }
   };
 
@@ -256,12 +257,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       modalContent.innerHTML = `
         <img src="${data.image}" alt="${data.title}" style="width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
-        <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-main);">${data.title}</h2>
+        <h2 style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--text-main);">${data.title}</h2>
         <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">${data.description}</p>
         
-        <h4 style="font-size: 1.1rem; color: var(--accent-cyan); margin-bottom: 0.8rem;">Öne Çıkan Özellikler:</h4>
+        <h4 style="font-size: 1.1rem; color: var(--accent-cyan); margin-bottom: 0.8rem;">Sistem Özellikleri & Çıktılar:</h4>
         <ul style="list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-          ${data.features.map(f => `<li style="color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--accent-cyan);"></i> ${f}</li>`).join('')}
+          ${data.features.map(f => `<li style="color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> ${f}</li>`).join('')}
         </ul>
 
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
@@ -269,8 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div style="display: flex; gap: 1rem;">
-          <a href="${data.demo}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-globe"></i> Canlı Demo</a>
-          <a href="${data.github}" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="${data.github}" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> Model Detayları</a>
         </div>
       `;
 
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    showToast("Teşekkürler! Mesajınız başarıyla gönderildi.");
+    showToast("Teşekkürler! Mesajınız başarıyla iletildi.");
     contactForm.reset();
   });
 
