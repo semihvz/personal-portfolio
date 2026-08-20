@@ -1,50 +1,50 @@
 /* ==========================================================================
-   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC
+   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (ENGLISH)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   const articles = {
     "1": {
-      category: "TALEP PLANLAMA // ANALİZ 01",
-      title: "Endüstriyel Tesislerde Talep Tahminleme: İstatistiki Modeller ve Yapay Zeka Yaklaşımları",
+      category: "DEMAND PLANNING // ANALYSIS 01",
+      title: "Demand Forecasting in Industrial Facilities: Statistical Models vs. Machine Learning",
       content: `
-        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Talep tahminleme, modern tedarik zinciri yönetiminin temel taşıdır. Doğru bir talep tahmini olmadan yapılan üretim planları ya yüksek stok tutma maliyetlerine (Overstock) ya da müşteri kayıplarına yol açan stoksuzluk krizlerine (Stockout) neden olur.</p>
+        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Demand forecasting forms the cornerstone of modern supply chain management. Without accurate demand forecasts, production schedules lead either to excessive holding costs (Overstock) or lost sales caused by stockouts.</p>
         
-        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. İstatistiksel Zaman Serisi Modelleri</h4>
-        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Geleneksel zaman serisi analizinde ARIMA (Autoregressive Integrated Moving Average) ve Holt-Winters Üstel Düzeltme yöntemleri mevsimsellik ve trend içeren verilerde güçlü sonuçlar verir. Özellikle geçmiş 2-3 yıllık düzenli satış verisine sahip SKU gruplarında baseline tahmin aracı olarak kullanılır.</p>
+        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Statistical Time Series Models</h4>
+        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In traditional time-series analysis, ARIMA (Autoregressive Integrated Moving Average) and Holt-Winters Exponential Smoothing yield strong results on data with clear seasonality and trends. They serve as a baseline forecasting tool, particularly for SKU groups with 2-3 years of consistent sales history.</p>
         
-        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Makine Öğrenmesi Yaklaşımları (Prophet & XGBoost)</h4>
-        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Fiyat promosyonları, tatil günleri ve dışsal ekonomik göstergelerin dahil edildiği karmaşık senaryolarda Facebook Prophet ve XGBoost gibi gradient boosting modelleri öne çıkar. Bu algoritmalar eksik verileri tolere etme ve anomali tespiti konusunda yüksek başarı gösterir.</p>
+        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Machine Learning Approaches (Prophet & XGBoost)</h4>
+        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In complex scenarios involving price promotions, holidays, and external macroeconomic indicators, models like Facebook Prophet and XGBoost excel. These algorithms handle missing data effectively and perform anomaly detection.</p>
 
-        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Tahmin Performans Ölçümü (WAPE / MAPE)</h4>
-        <p style="color: #333; line-height: 1.8;">Tahminlerin başarısı Ortalama Mutlak Yüzde Hata (MAPE) ve Ağırlıklı Ortalama Mutlak Hata (WAPE) ile ölçülmelidir. İdeal bir talep planlama sisteminde hedef WAPE oranının %10'un altında tutulmasıdır.</p>
+        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Forecast Performance Measurement (WAPE / MAPE)</h4>
+        <p style="color: #333; line-height: 1.8;">Forecast performance should be evaluated using Mean Absolute Percentage Error (MAPE) and Weighted Absolute Percentage Error (WAPE). An optimal demand planning system targets WAPE rates below 10%.</p>
       `
     },
     "2": {
-      category: "ÜRETİM ÇİZELGELEME // ANALİZ 02",
-      title: "Kapasite ve Üretim Çizelgelemede Darboğaz (Bottleneck) Yönetimi ve SMED",
+      category: "PRODUCTION SCHEDULING // ANALYSIS 02",
+      title: "Bottleneck Management and SMED in Production Scheduling & Capacity Planning",
       content: `
-        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Üretim hatlarında toplam çıktı kapasitesini belirleyen unsur, sistemdeki en yavaş çalışan işlem yani darboğazdır (Bottleneck). Goldratt'ın Kısıtlar Teorisi'ne (TOC) göre darboğaz dışındaki hatlarda yapılan iyileştirmeler toplam fabrika çıktısını artırmaz.</p>
+        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In manufacturing lines, total output capacity is governed by the system's slowest operation—the bottleneck. According to Goldratt's Theory of Constraints (TOC), improvements made outside the bottleneck do not increase overall factory throughput.</p>
         
-        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. SMED ile Kalıp Değişim Sürelerinin Düşürülmesi</h4>
-        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Üretim çizelgelemede en büyük zaman kayıpları kalıp değişim (Set-up) esnasında yaşanır. SMED (Single-Minute Exchange of Die) metodolojisiyle iç set-up ve dış set-up işlemleri ayrıştırılarak hazırlık süreleri dakikalar seviyesine indirilebilir.</p>
+        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Setup Time Reduction via SMED</h4>
+        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">The largest time losses in production scheduling occur during changeovers. Applying Single-Minute Exchange of Die (SMED) separates internal and external setup tasks, reducing changeover times down to single-digit minutes.</p>
         
-        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. MILP ile Otomatik Gantt Çizelgeleme</h4>
-        <p style="color: #333; line-height: 1.8;">Karma Tam Sayılı Doğrusal Programlama (MILP) modelleri sayesinde işlerin makinelere atanması, kurulum sürelerinin en aza indirilmesi ve teslimat tarihlerine tam uyum otomatik olarak hesaplanır.</p>
+        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Automated Gantt Scheduling via MILP</h4>
+        <p style="color: #333; line-height: 1.8;">Mixed-Integer Linear Programming (MILP) models automatically optimize job assignments, minimize setup times, and guarantee strict due-date adherence.</p>
       `
     },
     "3": {
-      category: "STOK YÖNETİMİ // ANALİZ 03",
-      title: "Stok Devir Hızını Artırırken Stoksuz Kalma Riskini (Stockout) Sıfırlamak",
+      category: "INVENTORY MANAGEMENT // ANALYSIS 03",
+      title: "Increasing Inventory Turnover While Eliminating Stockout Risks",
       content: `
-        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Stok yönetimi, şirket finansmanının ve işletme sermayesinin (Working Capital) kalbidir. Yüksek stok seviyeleri likiditeyi kilitlerken, düşük stok ise müşteri memnuniyetsizliğine yol açar.</p>
+        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Inventory management lies at the heart of corporate finance and working capital optimization. High inventory levels lock up liquidity, whereas understocking damages customer satisfaction.</p>
         
-        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dinamik Güvenlik Stoğu (Safety Stock) Formülasyonu</h4>
-        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Sabit güvenlik stoğu tutmak yerine, tedarikçi teslimat süresi değişkenliği (Lead Time Std Dev) ve talep dalgalanmasını dikkate alan istatistiksel güvenlik stoğu formülleri uygulanmalıdır.</p>
+        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dynamic Safety Stock Formulation</h4>
+        <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Rather than maintaining static safety stocks, dynamic statistical formulas incorporating supplier lead time variance and demand volatility must be applied.</p>
         
-        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matris Analizi</h4>
-        <p style="color: #333; line-height: 1.8;">Ürünlerin ciro katkısına göre (ABC) ve talep tahmin edilebilirliğine göre (XYZ) matrisler oluşturularak her grup için farklı stok politikaları belirlenmelidir.</p>
+        <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matrix Analysis</h4>
+        <p style="color: #333; line-height: 1.8;">Categorizing items by revenue contribution (ABC) and demand predictability (XYZ) enables tailored inventory policies for each product segment.</p>
       `
     }
   };
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert("Talebiniz başarıyla iletildi. En kısa sürede dönüş yapılacaktır.");
+      alert("Your inquiry has been submitted successfully. We will respond shortly.");
       contactForm.reset();
     });
   }
