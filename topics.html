@@ -66,16 +66,26 @@
         <!-- Articles Directory List -->
         <div class="topic-articles-list">
           
-          <!-- Article Item 1 -->
-          <article class="pub-item read-topic-trigger" data-topic="1">
-            <div class="pub-tag" data-i18n="topic_1_tag">MODULE 01 // FORECASTING</div>
-            <div>
-              <h2 class="pub-title" data-i18n="topic_1_title">TALEP TAHMİNİ & ZAMAN SERİLERİ ANALİZİ REHBERİ</h2>
-              <p class="pub-desc" data-i18n="topic_1_desc">
-                Zaman serilerinde trend, mevsimsellik ve döngüsellik ayrıştırması. ARIMA, Holt-Winters ve Prophet modelleri ile WAPE/MAPE tahmin hatası analizi.
-              </p>
+          <!-- Article Item 1 (Module 01 with Direct Embedded Video) -->
+          <article class="pub-item read-topic-trigger" data-topic="1" style="display:block;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1rem;">
+              <div class="pub-tag" data-i18n="topic_1_tag">MODULE 01 // FORECASTING</div>
+              <div class="pub-arrow">→ DETAYLI MAKALE</div>
             </div>
-            <div class="pub-arrow">→</div>
+            <h2 class="pub-title" data-i18n="topic_1_title">TALEP TAHMİNİ & ZAMAN SERİLERİ ANALİZİ REHBERİ</h2>
+            <p class="pub-desc" data-i18n="topic_1_desc" style="margin-bottom:1.5rem;">
+              Zaman serilerinde trend, mevsimsellik ve döngüsellik ayrıştırması. ARIMA, Holt-Winters ve Prophet modelleri ile WAPE/MAPE tahmin hatası analizi.
+            </p>
+
+            <!-- DIRECT YOUTUBE PLAYER EMBEDDED ON THE PAGE -->
+            <div style="margin-top: 1.5rem; border: 1px solid var(--border-color); background-color: var(--bg-secondary); padding: 0.75rem;" onclick="event.stopPropagation();">
+              <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%;">
+                <iframe src="https://www.youtube.com/embed/1pUzaV33YCM" title="Module 01 - Demand Forecasting Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+              </div>
+              <div style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; color: var(--text-primary); margin-top: 0.75rem; text-transform: uppercase;">
+                ▶ REHBER VİDEOSU // TALEP TAHMİNLEME VE ZAMAN SERİLERİ ANALİZİ
+              </div>
+            </div>
           </article>
 
           <!-- Article Item 2 -->
