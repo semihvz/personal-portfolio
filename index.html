@@ -34,11 +34,15 @@
           </ul>
         </nav>
 
-        <!-- Language Switcher Buttons -->
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="tr" id="btn-tr">TR</button>
-          <span class="lang-divider">|</span>
-          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+        <!-- Header Controls (Theme & Language Switchers) -->
+        <div class="header-controls">
+          <button class="theme-btn" id="theme-toggle">DARK</button>
+          
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="tr" id="btn-tr">TR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+          </div>
         </div>
       </div>
     </div>
@@ -202,31 +206,31 @@
                 <div class="eoq-result-card highlight">
                   <div class="eoq-result-label" data-i18n="eoq_res_eoq">OPTIMAL SİPARİŞ MİKTARI (EOQ)</div>
                   <div class="eoq-result-val" id="res-eoq">1,000</div>
-                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_unit">birim/sipariş</small>
+                  <small style="color:var(--text-muted); font-size:0.75rem;" data-i18n="eoq_res_unit">birim/sipariş</small>
                 </div>
 
                 <div class="eoq-result-card">
                   <div class="eoq-result-label" data-i18n="eoq_res_orders">YILLIK SİPARİŞ SAYISI (N)</div>
                   <div class="eoq-result-val" id="res-orders">10</div>
-                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_orders_unit">sipariş/yıl</small>
+                  <small style="color:var(--text-muted); font-size:0.75rem;" data-i18n="eoq_res_orders_unit">sipariş/yıl</small>
                 </div>
 
                 <div class="eoq-result-card">
                   <div class="eoq-result-label" data-i18n="eoq_res_cycle">SİPARİŞ PERİYODU (T)</div>
                   <div class="eoq-result-val" id="res-cycle">36.5</div>
-                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_days">gün/sipariş</small>
+                  <small style="color:var(--text-muted); font-size:0.75rem;" data-i18n="eoq_res_days">gün/sipariş</small>
                 </div>
 
                 <div class="eoq-result-card">
                   <div class="eoq-result-label" data-i18n="eoq_res_cost">TOPLAM STOK MALİYETİ (TC)</div>
                   <div class="eoq-result-val" id="res-cost">₺3,000</div>
-                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_cost_unit">TL/yıl (TOC + THC)</small>
+                  <small style="color:var(--text-muted); font-size:0.75rem;" data-i18n="eoq_res_cost_unit">TL/yıl (TOC + THC)</small>
                 </div>
               </div>
 
               <!-- EOQ Cost Curve Canvas Chart -->
               <div class="eoq-chart-wrapper">
-                <div style="font-size:0.75rem; font-weight:900; text-transform:uppercase; letter-spacing:0.1em; color:var(--mid-gray); margin-bottom:0.75rem;" data-i18n="eoq_chart_title">TOPLAM MALİYET EĞRİSİ VE OPTİMUM SİPARİŞ NOKTASI</div>
+                <div style="font-size:0.75rem; font-weight:900; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:0.75rem;" data-i18n="eoq_chart_title">TOPLAM MALİYET EĞRİSİ VE OPTİMUM SİPARİŞ NOKTASI</div>
                 <canvas id="eoq-chart"></canvas>
               </div>
             </div>
@@ -297,14 +301,14 @@
         <div>
           <span class="section-kicker" data-i18n="contact_kicker">KURUMSAL İLETİŞİM</span>
           <h2 class="section-main-title" data-i18n="contact_title">İLETİŞİME GEÇİN</h2>
-          <p style="color: var(--mid-gray); margin-top: 1.5rem; line-height: 1.8;" data-i18n="contact_desc">
+          <p style="color: var(--text-muted); margin-top: 1.5rem; line-height: 1.8;" data-i18n="contact_desc">
             Planlama projeleri, S&OP danışmanlığı veya kurumsal değerlendirmeler için doğrudan iletişim kurabilirsiniz.
           </p>
           <div style="margin-top: 2.5rem;">
-            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid-gray);" data-i18n="contact_email_label">E-POSTA</p>
+            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);" data-i18n="contact_email_label">E-POSTA</p>
             <p style="font-size: 1.15rem; font-weight: 900; margin-bottom: 1.5rem;">semih.planlama@gmail.com</p>
 
-            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid-gray);" data-i18n="contact_loc_label">LOKASYON</p>
+            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);" data-i18n="contact_loc_label">LOKASYON</p>
             <p style="font-size: 1.15rem; font-weight: 900;" data-i18n="contact_loc_val">İstanbul / Türkiye</p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR & EN I18N + EOQ + TOPICS)
+   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR/EN I18N + DARK/LIGHT THEME)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -183,35 +183,35 @@ document.addEventListener('DOMContentLoaded', () => {
         category: "TALEP PLANLAMA // ANALİZ 01",
         title: "Endüstriyel Tesislerde Talep Tahminleme: İstatistiki Modeller ve Yapay Zeka Yaklaşımları",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Talep tahminleme, modern tedarik zinciri yönetiminin temel taşıdır. Doğru bir talep tahmini olmadan yapılan üretim planları ya yüksek stok tutma maliyetlerine (Overstock) ya da müşteri kayıplarına yol açan stoksuzluk krizlerine (Stockout) neden olur.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. İstatistiksel Zaman Serisi Modelleri</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Geleneksel zaman serisi analizinde ARIMA ve Holt-Winters Üstel Düzeltme yöntemleri mevsimsellik ve trend içeren verilerde güçlü sonuçlar verir.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Makine Öğrenmesi Yaklaşımları (Prophet & XGBoost)</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Fiyat promosyonları, tatil günleri ve dışsal ekonomik göstergelerin dahil edildiği karmaşık senaryolarda Facebook Prophet ve XGBoost modelleri öne çıkar.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Tahmin Performans Ölçümü (WAPE / MAPE)</h4>
-          <p style="color: #333; line-height: 1.8;">Tahminlerin başarısı MAPE ve WAPE ile ölçülmelidir. İdeal bir talep planlama sisteminde hedef WAPE oranının %10'un altında tutulmasıdır.</p>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Talep tahminleme, modern tedarik zinciri yönetiminin temel taşıdır. Doğru bir talep tahmini olmadan yapılan üretim planları ya yüksek stok tutma maliyetlerine (Overstock) ya da müşteri kayıplarına yol açan stoksuzluk krizlerine (Stockout) neden olur.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. İstatistiksel Zaman Serisi Modelleri</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Geleneksel zaman serisi analizinde ARIMA ve Holt-Winters Üstel Düzeltme yöntemleri mevsimsellik ve trend içeren verilerde güçlü sonuçlar verir.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Makine Öğrenmesi Yaklaşımları (Prophet & XGBoost)</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Fiyat promosyonları, tatil günleri ve dışsal ekonomik göstergelerin dahil edildiği karmaşık senaryolarda Facebook Prophet ve XGBoost modelleri öne çıkar.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Tahmin Performans Ölçümü (WAPE / MAPE)</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Tahminlerin başarısı MAPE ve WAPE ile ölçülmelidir. İdeal bir talep planlama sisteminde hedef WAPE oranının %10'un altında tutulmasıdır.</p>
         `
       },
       "2": {
         category: "ÜRETİM ÇİZELGELEME // ANALİZ 02",
         title: "Kapasite ve Üretim Çizelgelemede Darboğaz (Bottleneck) Yönetimi ve SMED",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Üretim hatlarında toplam çıktı kapasitesini belirleyen unsur, sistemdeki en yavaş çalışan işlem yani darboğazdır (Bottleneck).</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. SMED ile Kalıp Değişim Sürelerinin Düşürülmesi</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">SMED metodolojisiyle iç set-up ve dış set-up işlemleri ayrıştırılarak hazırlık süreleri dakikalar seviyesine indirilebilir.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. MILP ile Otomatik Gantt Çizelgeleme</h4>
-          <p style="color: #333; line-height: 1.8;">Karma Tam Sayılı Doğrusal Programlama (MILP) modelleri sayesinde işlerin makinelere atanması ve teslimat tarihlerine uyum otomatik hesaplanır.</p>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Üretim hatlarında toplam çıktı kapasitesini belirleyen unsur, sistemdeki en yavaş çalışan işlem yani darboğazdır (Bottleneck).</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. SMED ile Kalıp Değişim Sürelerinin Düşürülmesi</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">SMED metodolojisiyle iç set-up ve dış set-up işlemleri ayrıştırılarak hazırlık süreleri dakikalar seviyesine indirilebilir.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. MILP ile Otomatik Gantt Çizelgeleme</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Karma Tam Sayılı Doğrusal Programlama (MILP) modelleri sayesinde işlerin makinelere atanması ve teslimat tarihlerine uyum otomatik hesaplanır.</p>
         `
       },
       "3": {
         category: "STOK YÖNETİMİ // ANALİZ 03",
         title: "Stok Devir Hızını Artırırken Stoksuz Kalma Riskini (Stockout) Sıfırlamak",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Stok yönetimi, işletme sermayesinin (Working Capital) kalbidir.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dinamik Güvenlik Stoğu (Safety Stock) Formülasyonu</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Tedarikçi teslimat süresi değişkenliği ve talep dalgalanmasını dikkate alan istatistiksel güvenlik stoğu formülleri uygulanmalıdır.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matris Analizi</h4>
-          <p style="color: #333; line-height: 1.8;">Ürünler ciro katkısına (ABC) ve talep tahmin edilebilirliğine (XYZ) göre kategorize edilmelidir.</p>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Stok yönetimi, işletme sermayesinin (Working Capital) kalbidir.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dinamik Güvenlik Stoğu (Safety Stock) Formülasyonu</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Tedarikçi teslimat süresi değişkenliği ve talep dalgalanmasını dikkate alan istatistiksel güvenlik stoğu formülleri uygulanmalıdır.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matris Analizi</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Ürünler ciro katkısına (ABC) ve talep tahmin edilebilirliğine (XYZ) göre kategorize edilmelidir.</p>
         `
       }
     },
@@ -220,41 +220,68 @@ document.addEventListener('DOMContentLoaded', () => {
         category: "DEMAND PLANNING // ANALYSIS 01",
         title: "Demand Forecasting in Industrial Facilities: Statistical Models vs. Machine Learning",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Demand forecasting forms the cornerstone of modern supply chain management. Without accurate demand forecasts, production schedules lead either to excessive holding costs (Overstock) or lost sales caused by stockouts.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Statistical Time Series Models</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In traditional time-series analysis, ARIMA and Holt-Winters Exponential Smoothing yield strong results on data with clear seasonality and trends.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Machine Learning Approaches (Prophet & XGBoost)</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In complex scenarios involving promotions and macroeconomic indicators, models like Facebook Prophet and XGBoost excel.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Forecast Performance Measurement (WAPE / MAPE)</h4>
-          <p style="color: #333; line-height: 1.8;">Forecast performance should be evaluated using MAPE and WAPE, targeting WAPE rates below 10%.</p>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Demand forecasting forms the cornerstone of modern supply chain management. Without accurate demand forecasts, production schedules lead either to excessive holding costs (Overstock) or lost sales caused by stockouts.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Statistical Time Series Models</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">In traditional time-series analysis, ARIMA and Holt-Winters Exponential Smoothing yield strong results on data with clear seasonality and trends.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Machine Learning Approaches (Prophet & XGBoost)</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">In complex scenarios involving promotions and macroeconomic indicators, models like Facebook Prophet and XGBoost excel.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Forecast Performance Measurement (WAPE / MAPE)</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Forecast performance should be evaluated using MAPE and WAPE, targeting WAPE rates below 10%.</p>
         `
       },
       "2": {
         category: "PRODUCTION SCHEDULING // ANALYSIS 02",
         title: "Bottleneck Management and SMED in Production Scheduling & Capacity Planning",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In manufacturing lines, total output capacity is governed by the system's slowest operation—the bottleneck.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Setup Time Reduction via SMED</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Applying Single-Minute Exchange of Die (SMED) separates internal and external setup tasks, reducing changeover times down to single-digit minutes.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Automated Gantt Scheduling via MILP</h4>
-          <p style="color: #333; line-height: 1.8;">Mixed-Integer Linear Programming (MILP) models automatically optimize job assignments and due-date adherence.</p>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">In manufacturing lines, total output capacity is governed by the system's slowest operation—the bottleneck.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Setup Time Reduction via SMED</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Applying Single-Minute Exchange of Die (SMED) separates internal and external setup tasks, reducing changeover times down to single-digit minutes.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Automated Gantt Scheduling via MILP</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Mixed-Integer Linear Programming (MILP) models automatically optimize job assignments and due-date adherence.</p>
         `
       },
       "3": {
         category: "INVENTORY MANAGEMENT // ANALYSIS 03",
         title: "Increasing Inventory Turnover While Eliminating Stockout Risks",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Inventory management lies at the heart of corporate finance and working capital optimization.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dynamic Safety Stock Formulation</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Dynamic statistical formulas incorporating supplier lead time variance and demand volatility must be applied.</p>
-          <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matrix Analysis</h4>
-          <p style="color: #333; line-height: 1.8;">Categorizing items by revenue contribution (ABC) and demand predictability (XYZ) enables tailored inventory policies.</p>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Inventory management lies at the heart of corporate finance and working capital optimization.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dynamic Safety Stock Formulation</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Dynamic statistical formulas incorporating supplier lead time variance and demand volatility must be applied.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matrix Analysis</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Categorizing items by revenue contribution (ABC) and demand predictability (XYZ) enables tailored inventory policies.</p>
         `
       }
     }
   };
 
-  // Active Language State
+  // 2. THEME ENGINE (DARK / LIGHT)
+  let currentTheme = localStorage.getItem('theme') || 'light';
+  const themeBtn = document.getElementById('theme-toggle');
+
+  function setTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'dark') {
+      document.body.classList.add('dark-mode');
+      if (themeBtn) themeBtn.textContent = 'LIGHT';
+    } else {
+      document.body.classList.remove('dark-mode');
+      if (themeBtn) themeBtn.textContent = 'DARK';
+    }
+
+    // Redraw Canvas Chart with current theme colors
+    calculateEOQ();
+  }
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+      setTheme(nextTheme);
+    });
+  }
+
+  // 3. LANGUAGE ENGINE (TR / EN)
   let currentLang = localStorage.getItem('lang') || 'tr';
 
   function setLanguage(lang) {
@@ -291,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnTr) btnTr.addEventListener('click', () => setLanguage('tr'));
   if (btnEn) btnEn.addEventListener('click', () => setLanguage('en'));
 
-  // 2. EOQ CALCULATOR ENGINE
+  // 4. EOQ CALCULATOR ENGINE
   const inputDemand = document.getElementById('eoq-demand');
   const inputSetup = document.getElementById('eoq-setup');
   const inputHolding = document.getElementById('eoq-holding');
@@ -348,6 +375,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isNaN(eoq) || eoq <= 0) return;
 
+    // Theme Color Adaptations
+    const isDark = currentTheme === 'dark';
+    const axisColor = isDark ? '#333333' : '#e5e5e5';
+    const mainCurveColor = isDark ? '#ffffff' : '#000000';
+    const subCurveColor = isDark ? '#666666' : '#888888';
+    const textColor = isDark ? '#aaaaaa' : '#111111';
+
     const padding = { top: 20, right: 30, bottom: 35, left: 50 };
     const graphW = w - padding.left - padding.right;
     const graphH = h - padding.top - padding.bottom;
@@ -365,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Grid Base Lines
-    ctx.strokeStyle = '#e5e5e5';
+    ctx.strokeStyle = axisColor;
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(padding.left, padding.top + graphH);
@@ -376,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Holding Cost Line (Dashed Gray)
     ctx.setLineDash([4, 4]);
-    ctx.strokeStyle = '#888888';
+    ctx.strokeStyle = subCurveColor;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     for (let step = 0; step <= 50; step++) {
@@ -391,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Ordering Cost Line (Dashed Light Gray)
     ctx.setLineDash([4, 4]);
-    ctx.strokeStyle = '#aaaaaa';
+    ctx.strokeStyle = subCurveColor;
     ctx.beginPath();
     for (let step = 0; step <= 50; step++) {
       const q = qMin + (step / 50) * (qMax - qMin);
@@ -403,9 +437,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     ctx.stroke();
 
-    // 3. Total Cost Curve (Solid Thick Black Line)
+    // 3. Total Cost Curve (Solid Line)
     ctx.setLineDash([]);
-    ctx.strokeStyle = '#000000';
+    ctx.strokeStyle = mainCurveColor;
     ctx.lineWidth = 2.5;
     ctx.beginPath();
     for (let step = 0; step <= 50; step++) {
@@ -422,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const eoqX = toX(eoq);
     const eoqY = toY(minTotalCost);
 
-    ctx.strokeStyle = '#000000';
+    ctx.strokeStyle = mainCurveColor;
     ctx.lineWidth = 1;
     ctx.setLineDash([3, 3]);
     ctx.beginPath();
@@ -432,14 +466,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // EOQ Point Marker Circle
     ctx.setLineDash([]);
-    ctx.fillStyle = '#000000';
+    ctx.fillStyle = mainCurveColor;
     ctx.beginPath();
     ctx.arc(eoqX, eoqY, 5, 0, Math.PI * 2);
     ctx.fill();
 
     // X Axis Label
     ctx.font = '10px -apple-system, sans-serif';
-    ctx.fillStyle = '#111111';
+    ctx.fillStyle = textColor;
     ctx.fillText('EOQ = ' + Math.round(eoq).toLocaleString(), eoqX - 25, padding.top + graphH + 20);
   }
 
@@ -448,7 +482,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (inputSetup) inputSetup.addEventListener('input', calculateEOQ);
   if (inputHolding) inputHolding.addEventListener('input', calculateEOQ);
 
-  // Initialize Language & Initial EOQ Calculation
+  // Initial Theme, Language & EOQ Setup
+  setTheme(currentTheme);
   setLanguage(currentLang);
   window.addEventListener('resize', calculateEOQ);
 
@@ -466,9 +501,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!data) return;
 
       modalContent.innerHTML = `
-        <div style="font-size:0.75rem; font-weight:900; color:#666; letter-spacing:0.12em; margin-bottom:1rem;">${data.category}</div>
-        <h2 style="font-size:1.8rem; font-weight:900; text-transform:uppercase; margin-bottom:1.5rem; color:#000; line-height:1.2; letter-spacing:-0.02em;">${data.title}</h2>
-        <div style="border-top:1px solid #e5e5e5; padding-top:1.5rem;">${data.content}</div>
+        <div style="font-size:0.75rem; font-weight:900; color:var(--text-muted); letter-spacing:0.12em; margin-bottom:1rem;">${data.category}</div>
+        <h2 style="font-size:1.8rem; font-weight:900; text-transform:uppercase; margin-bottom:1.5rem; color:var(--text-primary); line-height:1.2; letter-spacing:-0.02em;">${data.title}</h2>
+        <div style="border-top:1px solid var(--border-color); padding-top:1.5rem;">${data.content}</div>
       `;
 
       modal.classList.add('active');
