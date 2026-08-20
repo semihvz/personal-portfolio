@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- YouTube Embedded Video Container -->
           <div style="margin: 2rem 0; border: 1px solid var(--border-color); background-color: var(--bg-secondary); padding: 0.5rem;">
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%;">
-              <iframe src="https://www.youtube.com/embed/1pUzaV33YCM" title="Module 01 - Demand Forecasting Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/1pUzaV33YCM?rel=0" title="Module 01 - Demand Forecasting Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
             </div>
             <div style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.5rem; text-transform: uppercase;">
               VİDEO // MODULE 01 - TALEP TAHMİNLEME VE ZAMAN SERİLERİ
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Kısıtlar Teorisi (TOC) ve Darboğaz Yönetimi</h4>
           <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Bir tesisin çıktı hızı, en dar kapasiteye sahip olan makinenin (Darboğaz) hızıyla sınırlıdır. Darboğaz makinenin asla boş kalmaması ve hazırlık sürelerinin (Set-up) SMED ile minimize edilmesi esastır.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. MILP ile Otomatik Gantt Çizelgeleme</h4>
-          <p style="color: var(--text-primary); line-height: 1.8;">Karma Tam Sayılı Doğrusal Programlama (MILP) modelleri, sipariş teslim tarihlerine (Due Dates) uyum sağlarken toplam kalıp değişim süresini minimize eden optimum iş dizilimini verir.</p>
+          <p style="color: var(--text-primary); line-height: 1.8;">Karma Tam Sayılı Doğrusal Programlama (MILP) modelleri sayesinde işlerin makinelere atanması ve teslimat tarihlerine uyum otomatik hesaplanır.</p>
         `
       },
       "3": {
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- YouTube Embedded Video Container -->
           <div style="margin: 2rem 0; border: 1px solid var(--border-color); background-color: var(--bg-secondary); padding: 0.5rem;">
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%;">
-              <iframe src="https://www.youtube.com/embed/1pUzaV33YCM" title="Module 01 - Demand Forecasting Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/1pUzaV33YCM?rel=0" title="Module 01 - Demand Forecasting Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
             </div>
             <div style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.5rem; text-transform: uppercase;">
               VIDEO // MODULE 01 - DEMAND FORECASTING & TIME SERIES
