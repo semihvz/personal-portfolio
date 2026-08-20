@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR/EN I18N + DARK/LIGHT THEME)
+   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR/EN I18N + DARK/LIGHT + TOPICS BLOG)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const i18n = {
     tr: {
       brand_sub: "// ENDÜSTRİ & PLANLAMA",
+      nav_home: "ANA SAYFA",
       nav_approach: "YAKLAŞIM",
       nav_topics: "CORE TOPICS",
       nav_expertise: "UZMANLIK",
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       metric_3: "KAPASİTE KULLANIMI & OEE ARTIŞI",
       top_kicker: "MÜHENDİSLİK MÜFREDATI & AKADEMİK MODÜLLER",
       top_title: "CORE TOPICS // ANA KONU BAŞLIKLARI",
+      top_link_all: "TÜM MAKALELERİ İNCELE →",
       top_1_num: "MODULE 01 // FORECASTING",
       top_1_title: "TALEP TAHMİNİ & ZAMAN SERİLERİ ANALİZİ",
       top_1_body: "ARIMA, Prophet ve Üstel Düzeltme modelleriyle trend ve mevsimsellik ayrıştırması, WAPE/MAPE tahmin hata analizleri.",
@@ -35,6 +37,23 @@ document.addEventListener('DOMContentLoaded', () => {
       top_4_num: "MODULE 04 // GOVERNANCE",
       top_4_title: "S&OP & TEDARİK ZİNCİRİ YÖNETİŞİMİ",
       top_4_body: "Aylık S&OP toplantı döngüsü, talep-arz dengeleme, Senaryo Analizi (What-If) ve işletme sermayesi optimizasyonu.",
+      
+      topic_page_kicker: "AKADEMİK REHBER & MÜHENDİSLİK MÜFREDATI",
+      topic_page_heading: "CORE TOPICS // ENDÜSTRİYEL PLANLAMA VE MAKALE KÜTÜPHANESİ",
+      topic_page_lead: "Talep Tahminleme, Üretim Çizelgeleme, Stok Teorisi ve S&OP Yönetişimi başlıklarında hazırlanan detaylı teknik rehberler, matematiksel formülasyonlar ve vaka analizleri.",
+      topic_1_tag: "MODULE 01 // FORECASTING",
+      topic_1_title: "TALEP TAHMİNİ & ZAMAN SERİLERİ ANALİZİ REHBERİ",
+      topic_1_desc: "Zaman serilerinde trend, mevsimsellik ve döngüsellik ayrıştırması. ARIMA, Holt-Winters ve Prophet modelleri ile WAPE/MAPE tahmin hatası analizi.",
+      topic_2_tag: "MODULE 02 // SCHEDULING",
+      topic_2_title: "KAPASİTE PLANLAMA VE İLERİ ÜRETİM ÇİZELGELEME (APS)",
+      topic_2_desc: "MPS/MRP mimarisi, Kısıtlar Teorisi (TOC) ile darboğaz yönetimi, SMED ile kalıp değişim sürelerinin düşürülmesi ve MILP matematiksel çizelgeleme.",
+      topic_3_tag: "MODULE 03 // INVENTORY",
+      topic_3_title: "STOK TEORİSİ & DİNAMİK GÜVENLİK STOĞU (SAFETY STOCK)",
+      topic_3_desc: "EKONOMİK SİPARİŞ MİKTARI (EOQ) matematiği, tedarik süresi değişkenliği (Lead Time Std Dev), ROP formülleri ve ABC-XYZ stok sınıflandırması.",
+      topic_4_tag: "MODULE 04 // GOVERNANCE",
+      topic_4_title: "S&OP (SATIŞ VE OPERASYON PLANLAMASI) KURUMSAL YÖNETİŞİMİ",
+      topic_4_desc: "Aylık S&OP toplantı döngüsü, konsensüs talep planlama, arz-talep dengeleme, Senaryo Analizi (What-If) ve işletme sermayesi optimizasyonu.",
+
       exp_kicker: "DANIŞMANLIK & OPERASYONEL ALANLAR",
       exp_title: "UZMANLIK ALANLARI",
       exp_1_num: "01 // TALEP PLANLAMA",
@@ -92,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     en: {
       brand_sub: "// INDUSTRIAL ENGINEERING & PLANNING",
+      nav_home: "HOME",
       nav_approach: "APPROACH",
       nav_topics: "CORE TOPICS",
       nav_expertise: "EXPERTISE",
@@ -107,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
       metric_3: "CAPACITY UTILIZATION & OEE ENHANCEMENT",
       top_kicker: "ENGINEERING CURRICULUM & CORE MODULES",
       top_title: "CORE TOPICS // PRIMARY SUBJECT MODULES",
+      top_link_all: "EXPLORE ALL ARTICLES →",
       top_1_num: "MODULE 01 // FORECASTING",
       top_1_title: "DEMAND FORECASTING & TIME SERIES ANALYSIS",
       top_1_body: "Trend and seasonality decomposition via ARIMA, Prophet, and Exponential Smoothing; WAPE/MAPE error analytics.",
@@ -119,6 +140,23 @@ document.addEventListener('DOMContentLoaded', () => {
       top_4_num: "MODULE 04 // GOVERNANCE",
       top_4_title: "S&OP & SUPPLY CHAIN GOVERNANCE",
       top_4_body: "Monthly S&OP executive cycle, demand-supply balancing, What-If scenario simulations, and working capital optimization.",
+      
+      topic_page_kicker: "ENGINEERING CURRICULUM & ACADEMIC GUIDE",
+      topic_page_heading: "CORE TOPICS // INDUSTRIAL PLANNING ARTICLE DIRECTORY",
+      topic_page_lead: "Comprehensive technical guides, mathematical formulations, and case breakdowns across Demand Forecasting, Advanced Scheduling, Inventory Theory, and S&OP Governance.",
+      topic_1_tag: "MODULE 01 // FORECASTING",
+      topic_1_title: "DEMAND FORECASTING & TIME SERIES ANALYSIS GUIDE",
+      topic_1_desc: "Decomposing trend, seasonality, and cyclicality in statistical time-series. Comparative WAPE/MAPE forecast accuracy analytics using ARIMA, Holt-Winters, and Prophet.",
+      topic_2_tag: "MODULE 02 // SCHEDULING",
+      topic_2_title: "CAPACITY PLANNING & ADVANCED PRODUCTION SCHEDULING (APS)",
+      topic_2_desc: "MPS/MRP architecture, Bottleneck optimization via Theory of Constraints (TOC), SMED setup reduction, and Mixed-Integer Linear Programming (MILP).",
+      topic_3_tag: "MODULE 03 // INVENTORY",
+      topic_3_title: "INVENTORY THEORY & DYNAMIC SAFETY STOCK FORMULATION",
+      topic_3_desc: "Economic Order Quantity (EOQ) mathematics, Lead Time standard deviation variance, Reorder Point (ROP) equations, and ABC-XYZ matrix segmentation.",
+      topic_4_tag: "MODULE 04 // GOVERNANCE",
+      topic_4_title: "SALES & OPERATIONS PLANNING (S&OP) CORPORATE GOVERNANCE",
+      topic_4_desc: "Monthly S&OP executive cycle, consensus demand planning, demand-supply alignment, What-If scenario simulations, and working capital optimization.",
+
       exp_kicker: "CONSULTING & OPERATIONAL AREAS",
       exp_title: "EXPERTISE AREAS",
       exp_1_num: "01 // DEMAND PLANNING",
@@ -176,7 +214,107 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Article Modal Contents
+  // Dedicated Topic Full Articles Content
+  const topicArticles = {
+    tr: {
+      "1": {
+        category: "MODULE 01 // FORECASTING REHBERİ",
+        title: "TALEP TAHMİNİ & ZAMAN SERİLERİ ANALİZİ REHBERİ",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Tedarik zinciri yönetiminde en kritik ilk adım doğru talep tahminlemesidir. İstatistiki yöntemlerde zaman serisi verileri 4 ana bileşene ayrıştırılır: <strong>Trend, Mevsimsellik, Döngüsellik ve Rastlantısal Değişkenlik</strong>.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. İstatistiksel Modeller (ARIMA & Holt-Winters)</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">ARIMA (Autoregressive Integrated Moving Average) durağan verilerde mükemmel sonuçlar verirken, Holt-Winters Üstel Düzeltme yöntemi güçlü mevsimsel dalgalanma gösteren tüketim malları sektöründe öne çıkar.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Hata Metrikleri (WAPE & MAPE)</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Tahmin performansını ölçerken sadece sapma miktarını değil, SKU hacmini de ağırlıklandıran <strong>WAPE (Weighted Absolute Percentage Error)</strong> metriği kullanılmalıdır:</p>
+          <p style="padding: 1rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); font-family: monospace; margin-bottom: 1.5rem;">WAPE = ∑ |Gerçek - Tahmin| / ∑ Gerçek</p>
+        `
+      },
+      "2": {
+        category: "MODULE 02 // SCHEDULING REHBERİ",
+        title: "KAPASİTE PLANLAMA VE İLERİ ÜRETİM ÇİZELGELEME (APS)",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">İmalat tesislerinde kısıtların (makine, işgücü, kalıp, hammadde) eş zamanlı olarak yönetilmesi gerekir. Geleneksel sezgisel sıralamalar yerine İleri Planlama ve Çizelgeleme (APS) yazılımları ve MILP modelleri kullanılır.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Kısıtlar Teorisi (TOC) ve Darboğaz Yönetimi</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Bir tesisin çıktı hızı, en dar kapasiteye sahip olan makinenin (Darboğaz) hızıyla sınırlıdır. Darboğaz makinenin asla boş kalmaması ve hazırlık sürelerinin (Set-up) SMED ile minimize edilmesi esastır.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. MILP ile Otomatik Gantt Çizelgeleme</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Karma Tam Sayılı Doğrusal Programlama (MILP) modelleri, sipariş teslim tarihlerine (Due Dates) uyum sağlarken toplam kalıp değişim süresini minimize eden optimum iş dizilimini verir.</p>
+        `
+      },
+      "3": {
+        category: "MODULE 03 // INVENTORY REHBERİ",
+        title: "STOK TEORİSİ & DİNAMİK GÜVENLİK STOĞU (SAFETY STOCK)",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Stok optimizasyonunun iki temel ayağı vardır: Sipariş zamanlaması ve sipariş miktarı. Tedarik sürelerindeki gecikmeler ve talep dalgalanmaları güvenlik stoğu gereksinimini doğurur.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dinamik Güvenlik Stoğu Formülasyonu</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">İstenen Hizmet Seviyesi (Service Level - Z puanı), Talep Standart Sapması (σd) ve Tedarik Süresi Standart Sapmasına (σL) göre hesaplanan dinamik formül:</p>
+          <p style="padding: 1rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); font-family: monospace; margin-bottom: 1.5rem;">Safety Stock = Z × √( L × σd² + d² × σL² )</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC-XYZ Matrisi</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Ürünler ciro değerine göre ABC, tahmin edilebilirliğine göre XYZ olarak sınıflandırılarak AX grubunda minimum stok tutulup CZ grubunda sipariş üzerine üretim politikaları belirlenir.</p>
+        `
+      },
+      "4": {
+        category: "MODULE 04 // GOVERNANCE REHBERİ",
+        title: "S&OP (SATIŞ VE OPERASYON PLANLAMASI) KURUMSAL YÖNETİŞİMİ",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Satış ve Operasyon Planlaması (S&OP), şirket stratejisini aylık operasyonel planlara dönüştüren üst düzey bir yönetişim mekanizmasıdır.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. 5 Adımlı S&OP Toplantı Döngüsü</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">1. Ürün Yönetimi Verileri → 2. Konsensüs Talep Planı → 3. Kapasite & Tedarik Planı → 4. Ön-S&OP Hizalama Toplantısı → 5. Executive S&OP İcra Kurulu Onayı.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Senaryo Analizleri (What-If Simulations)</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Hammadde fiyat artışları veya ani talep sıçramalarında işletmenin brüt kâr marjı ve stok riski üzerindeki etkileri simüle edilerek önleyici kararlar alınır.</p>
+        `
+      }
+    },
+    en: {
+      "1": {
+        category: "MODULE 01 // FORECASTING GUIDE",
+        title: "DEMAND FORECASTING & TIME SERIES ANALYSIS GUIDE",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Accurate demand forecasting represents the most critical foundation of supply chain operations. Statistical time series data decomposes into 4 components: <strong>Trend, Seasonality, Cyclicality, and Random Irregularity</strong>.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Statistical Models (ARIMA & Holt-Winters)</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">ARIMA models perform best on stationary series, whereas Holt-Winters Exponential Smoothing shines in consumer goods with strong seasonal cycles.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Error Metrics (WAPE & MAPE)</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Forecast performance must be measured using volume-weighted metrics such as <strong>WAPE (Weighted Absolute Percentage Error)</strong>:</p>
+          <p style="padding: 1rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); font-family: monospace; margin-bottom: 1.5rem;">WAPE = ∑ |Actual - Forecast| / ∑ Actual</p>
+        `
+      },
+      "2": {
+        category: "MODULE 02 // SCHEDULING GUIDE",
+        title: "CAPACITY PLANNING & ADVANCED PRODUCTION SCHEDULING (APS)",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Manufacturing systems require simultaneous constraint optimization across machines, tooling, labor, and raw materials using Advanced Planning & Scheduling (APS) engines and MILP models.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Theory of Constraints (TOC) & Bottleneck Control</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">A plant's throughput speed is strictly bound by its bottleneck resource. Bottlenecks must run continuously with setup times minimized via SMED principles.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Automated Gantt Scheduling via MILP</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Mixed-Integer Linear Programming (MILP) models generate optimal job sequencing that meets customer due dates while minimizing total setup loss.</p>
+        `
+      },
+      "3": {
+        category: "MODULE 03 // INVENTORY GUIDE",
+        title: "INVENTORY THEORY & DYNAMIC SAFETY STOCK FORMULATION",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Inventory optimization rests on two key pillars: Order timing and order quantity. Supplier lead time volatility and demand variance dictate safety stock requirements.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dynamic Safety Stock Formula</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Calculated dynamically using Target Service Level (Z-score), Demand Std Dev (σd), and Lead Time Std Dev (σL):</p>
+          <p style="padding: 1rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); font-family: monospace; margin-bottom: 1.5rem;">Safety Stock = Z × √( L × σd² + d² × σL² )</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC-XYZ Matrix Policy</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Products are categorized by revenue value (ABC) and predictability (XYZ), establishing lean inventory for AX items and make-to-order rules for CZ items.</p>
+        `
+      },
+      "4": {
+        category: "MODULE 04 // GOVERNANCE GUIDE",
+        title: "SALES & OPERATIONS PLANNING (S&OP) CORPORATE GOVERNANCE",
+        content: `
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">Sales and Operations Planning (S&OP) aligns corporate strategy with monthly operational execution across executive business units.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. 5-Step Monthly S&OP Cycle</h4>
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.8;">1. Product Management Update → 2. Consensus Demand Plan → 3. Capacity & Supply Plan → 4. Pre-S&OP Alignment → 5. Executive S&OP Approval.</p>
+          <h4 style="margin: 2rem 0 0.8rem 0; color: var(--text-primary); font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. What-If Scenario Simulations</h4>
+          <p style="color: var(--text-primary); line-height: 1.8;">Simulating raw material price spikes or sudden demand surges to evaluate profit margin impacts and mitigate working capital risks proactively.</p>
+        `
+      }
+    }
+  };
+
+  // Publications Short Articles Content
   const articles = {
     tr: {
       "1": {
@@ -270,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (themeBtn) themeBtn.textContent = 'DARK';
     }
 
-    // Redraw Canvas Chart with current theme colors
+    // Redraw Canvas Chart if present
     calculateEOQ();
   }
 
@@ -307,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnEn.classList.toggle('active', lang === 'en');
     }
 
-    // Recalculate EOQ Results with updated currency symbol
+    // Recalculate EOQ Results if present
     calculateEOQ();
   }
 
@@ -408,7 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.lineTo(padding.left, padding.top + graphH);
     ctx.stroke();
 
-    // 1. Holding Cost Line (Dashed Gray)
+    // 1. Holding Cost Line
     ctx.setLineDash([4, 4]);
     ctx.strokeStyle = subCurveColor;
     ctx.lineWidth = 1.5;
@@ -423,7 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     ctx.stroke();
 
-    // 2. Ordering Cost Line (Dashed Light Gray)
+    // 2. Ordering Cost Line
     ctx.setLineDash([4, 4]);
     ctx.strokeStyle = subCurveColor;
     ctx.beginPath();
@@ -437,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     ctx.stroke();
 
-    // 3. Total Cost Curve (Solid Line)
+    // 3. Total Cost Curve
     ctx.setLineDash([]);
     ctx.strokeStyle = mainCurveColor;
     ctx.lineWidth = 2.5;
@@ -487,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang);
   window.addEventListener('resize', calculateEOQ);
 
-  // Article Reader Modal Logic
+  // Article Reader Modal Logic (Publications)
   const modal = document.getElementById('article-modal');
   const modalContent = document.getElementById('article-content');
   const modalClose = document.getElementById('modal-close');
@@ -497,6 +635,25 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const artId = btn.getAttribute('data-article');
       const data = articles[currentLang][artId];
+
+      if (!data) return;
+
+      modalContent.innerHTML = `
+        <div style="font-size:0.75rem; font-weight:900; color:var(--text-muted); letter-spacing:0.12em; margin-bottom:1rem;">${data.category}</div>
+        <h2 style="font-size:1.8rem; font-weight:900; text-transform:uppercase; margin-bottom:1.5rem; color:var(--text-primary); line-height:1.2; letter-spacing:-0.02em;">${data.title}</h2>
+        <div style="border-top:1px solid var(--border-color); padding-top:1.5rem;">${data.content}</div>
+      `;
+
+      modal.classList.add('active');
+    });
+  });
+
+  // Dedicated Topic Reader Modal Logic (Topics Page)
+  const topicTriggers = document.querySelectorAll('.read-topic-trigger');
+  topicTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const topicId = btn.getAttribute('data-topic');
+      const data = topicArticles[currentLang][topicId];
 
       if (!data) return;
 
