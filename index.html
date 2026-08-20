@@ -6,7 +6,7 @@
   
   <title>SEMİH // Endüstri Mühendisliği & Operasyonel Planlama</title>
   <meta name="description" content="Talep tahminleme, üretim planlama, stok optimizasyonu ve S&OP süreçleri için veriye dayalı mühendislik portalı.">
-  <meta name="keywords" content="endüstri mühendisliği, talep planlama, üretim çizelgeleme, S&OP, stok optimizasyonu, BlackRock corporate monochrome">
+  <meta name="keywords" content="endüstri mühendisliği, talep planlama, üretim çizelgeleme, EOQ hesaplayıcı, S&OP, stok optimizasyonu, BlackRock corporate monochrome">
   <meta name="author" content="Semih">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▪️</text></svg>">
@@ -26,6 +26,7 @@
           <ul class="nav-menu">
             <li><a href="#approach" class="nav-link" data-i18n="nav_approach">YAKLAŞIM</a></li>
             <li><a href="#expertise" class="nav-link" data-i18n="nav_expertise">UZMANLIK</a></li>
+            <li><a href="#eoq" class="nav-link" data-i18n="nav_eoq">EOQ HESAPLAYICI</a></li>
             <li><a href="#publications" class="nav-link" data-i18n="nav_publications">ANALİZLER</a></li>
             <li><a href="#biography" class="nav-link" data-i18n="nav_biography">BİYOGRAFİ</a></li>
             <li><a href="#contact" class="nav-link" data-i18n="nav_contact">İLETİŞİM</a></li>
@@ -116,6 +117,73 @@
             </p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- EOQ Calculator Section -->
+    <section class="content-section" id="eoq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker" data-i18n="eoq_kicker">INTERAKTİF ARAÇLAR // STOK PLANLAMA</span>
+          <h2 class="section-main-title" data-i18n="eoq_title">EKONOMİK SİPARİŞ MİKTARI (EOQ) HESAPLAYICI</h2>
+        </div>
+
+        <div class="eoq-box">
+          <div class="eoq-grid">
+            <!-- Input Form -->
+            <div class="eoq-inputs">
+              <div class="form-field">
+                <label class="form-label" for="eoq-demand" data-i18n="eoq_demand_label">YILLIK TALEP (D) - BİRİM/YIL</label>
+                <input type="number" id="eoq-demand" class="form-input" value="10000" min="1" step="100">
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="eoq-setup" data-i18n="eoq_setup_label">SİPARİŞ / KURULUM MALİYETİ (S) - TL/SİPARİŞ</label>
+                <input type="number" id="eoq-setup" class="form-input" value="150" min="1" step="10">
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="eoq-holding" data-i18n="eoq_holding_label">ELDE TUTMA MALİYETİ (H) - TL/BİRİM/YIL</label>
+                <input type="number" id="eoq-holding" class="form-input" value="3.00" min="0.1" step="0.1">
+              </div>
+            </div>
+
+            <!-- Output & Chart -->
+            <div>
+              <div class="eoq-results-grid">
+                <div class="eoq-result-card highlight">
+                  <div class="eoq-result-label" data-i18n="eoq_res_eoq">OPTIMAL SİPARİŞ MİKTARI (EOQ)</div>
+                  <div class="eoq-result-val" id="res-eoq">1,000</div>
+                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_unit">birim/sipariş</small>
+                </div>
+
+                <div class="eoq-result-card">
+                  <div class="eoq-result-label" data-i18n="eoq_res_orders">YILLIK SİPARİŞ SAYISI (N)</div>
+                  <div class="eoq-result-val" id="res-orders">10</div>
+                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_orders_unit">sipariş/yıl</small>
+                </div>
+
+                <div class="eoq-result-card">
+                  <div class="eoq-result-label" data-i18n="eoq_res_cycle">SİPARİŞ PERİYODU (T)</div>
+                  <div class="eoq-result-val" id="res-cycle">36.5</div>
+                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_days">gün/sipariş</small>
+                </div>
+
+                <div class="eoq-result-card">
+                  <div class="eoq-result-label" data-i18n="eoq_res_cost">TOPLAM STOK MALİYETİ (TC)</div>
+                  <div class="eoq-result-val" id="res-cost">₺3,000</div>
+                  <small style="color:var(--mid-gray); font-size:0.75rem;" data-i18n="eoq_res_cost_unit">TL/yıl (TOC + THC)</small>
+                </div>
+              </div>
+
+              <!-- EOQ Cost Curve Canvas Chart -->
+              <div class="eoq-chart-wrapper">
+                <div style="font-size:0.75rem; font-weight:900; text-transform:uppercase; letter-spacing:0.1em; color:var(--mid-gray); margin-bottom:0.75rem;" data-i18n="eoq_chart_title">TOPLAM MALİYET EĞRİSİ VE OPTİMUM SİPARİŞ NOKTASI</div>
+                <canvas id="eoq-chart"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

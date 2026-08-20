@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR & EN I18N)
+   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR & EN I18N + EOQ)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       brand_sub: "// ENDÜSTRİ & PLANLAMA",
       nav_approach: "YAKLAŞIM",
       nav_expertise: "UZMANLIK",
+      nav_eoq: "EOQ HESAPLAYICI",
       nav_publications: "ANALİZLER",
       nav_biography: "BİYOGRAFİ",
       nav_contact: "İLETİŞİM",
@@ -33,6 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
       exp_4_num: "04 // S&OP ENTEGRASYONU",
       exp_4_title: "S&OP (SATIŞ VE OPERASYON PLANLAMASI)",
       exp_4_body: "Satış, Üretim, Satın Alma ve Finans birimleri arasında ortak işletme hedeflerinin belirlendiği aylık S&OP yönetişim ve karar destek mekanizmasının kurulması.",
+      eoq_kicker: "INTERAKTİF ARAÇLAR // STOK PLANLAMA",
+      eoq_title: "EKONOMİK SİPARİŞ MİKTARI (EOQ) HESAPLAYICI",
+      eoq_demand_label: "YILLIK TALEP (D) - BİRİM/YIL",
+      eoq_setup_label: "SİPARİŞ / KURULUM MALİYETİ (S) - TL/SİPARİŞ",
+      eoq_holding_label: "ELDE TUTMA MALİYETİ (H) - TL/BİRİM/YIL",
+      eoq_res_eoq: "OPTIMAL SİPARİŞ MİKTARI (EOQ)",
+      eoq_res_unit: "birim/sipariş",
+      eoq_res_orders: "YILLIK SİPARİŞ SAYISI (N)",
+      eoq_res_orders_unit: "sipariş/yıl",
+      eoq_res_cycle: "SİPARİŞ PERİYODU (T)",
+      eoq_res_days: "gün/sipariş",
+      eoq_res_cost: "TOPLAM STOK MALİYETİ (TC)",
+      eoq_res_cost_unit: "TL/yıl (TOC + THC)",
+      eoq_chart_title: "TOPLAM MALİYET EĞRİSİ VE OPTİMUM SİPARİŞ NOKTASI",
       pub_kicker: "TEKNİK ANALİZLER & İNCELEMELER",
       pub_title: "YAYINLAR & ANALİZLER",
       pub_1_tag: "TALEP PLANLAMA // 01",
@@ -64,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       brand_sub: "// INDUSTRIAL ENGINEERING & PLANNING",
       nav_approach: "APPROACH",
       nav_expertise: "EXPERTISE",
+      nav_eoq: "EOQ CALCULATOR",
       nav_publications: "PUBLICATIONS",
       nav_biography: "BIOGRAPHY",
       nav_contact: "CONTACT",
@@ -87,6 +103,20 @@ document.addEventListener('DOMContentLoaded', () => {
       exp_4_num: "04 // S&OP INTEGRATION",
       exp_4_title: "SALES & OPERATIONS PLANNING (S&OP)",
       exp_4_body: "Designing monthly executive S&OP governance and decision-support frameworks aligning Sales, Production, Procurement, and Finance.",
+      eoq_kicker: "INTERACTIVE TOOLS // INVENTORY PLANNING",
+      eoq_title: "ECONOMIC ORDER QUANTITY (EOQ) CALCULATOR",
+      eoq_demand_label: "ANNUAL DEMAND (D) - UNITS/YEAR",
+      eoq_setup_label: "ORDER / SETUP COST (S) - $/ORDER",
+      eoq_holding_label: "HOLDING COST (H) - $/UNIT/YEAR",
+      eoq_res_eoq: "OPTIMAL ORDER QUANTITY (EOQ)",
+      eoq_res_unit: "units/order",
+      eoq_res_orders: "ANNUAL ORDERS (N)",
+      eoq_res_orders_unit: "orders/year",
+      eoq_res_cycle: "ORDER CYCLE TIME (T)",
+      eoq_res_days: "days/order",
+      eoq_res_cost: "TOTAL INVENTORY COST (TC)",
+      eoq_res_cost_unit: "$/year (TOC + THC)",
+      eoq_chart_title: "TOTAL COST CURVE & OPTIMUM ORDER POINT",
       pub_kicker: "TECHNICAL ANALYSIS & INSIGHTS",
       pub_title: "PUBLICATIONS & INSIGHTS",
       pub_1_tag: "DEMAND PLANNING // 01",
@@ -116,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Article Modal Contents (Bilingual)
+  // Article Modal Contents
   const articles = {
     tr: {
       "1": {
@@ -125,9 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
         content: `
           <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Talep tahminleme, modern tedarik zinciri yönetiminin temel taşıdır. Doğru bir talep tahmini olmadan yapılan üretim planları ya yüksek stok tutma maliyetlerine (Overstock) ya da müşteri kayıplarına yol açan stoksuzluk krizlerine (Stockout) neden olur.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. İstatistiksel Zaman Serisi Modelleri</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Geleneksel zaman serisi analizinde ARIMA ve Holt-Winters Üstel Düzeltme yöntemleri mevsimsellik ve trend içeren verilerde güçlü sonuçlar verir. Özellikle geçmiş 2-3 yıllık düzenli satış verisine sahip SKU gruplarında baseline tahmin aracı olarak kullanılır.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Geleneksel zaman serisi analizinde ARIMA ve Holt-Winters Üstel Düzeltme yöntemleri mevsimsellik ve trend içeren verilerde güçlü sonuçlar verir.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Makine Öğrenmesi Yaklaşımları (Prophet & XGBoost)</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Fiyat promosyonları, tatil günleri ve dışsal ekonomik göstergelerin dahil edildiği karmaşık senaryolarda Facebook Prophet ve XGBoost gibi gradient boosting modelleri öne çıkar.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Fiyat promosyonları, tatil günleri ve dışsal ekonomik göstergelerin dahil edildiği karmaşık senaryolarda Facebook Prophet ve XGBoost modelleri öne çıkar.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Tahmin Performans Ölçümü (WAPE / MAPE)</h4>
           <p style="color: #333; line-height: 1.8;">Tahminlerin başarısı MAPE ve WAPE ile ölçülmelidir. İdeal bir talep planlama sisteminde hedef WAPE oranının %10'un altında tutulmasıdır.</p>
         `
@@ -136,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         category: "ÜRETİM ÇİZELGELEME // ANALİZ 02",
         title: "Kapasite ve Üretim Çizelgelemede Darboğaz (Bottleneck) Yönetimi ve SMED",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Üretim hatlarında toplam çıktı kapasitesini belirleyen unsur, sistemdeki en yavaş çalışan işlem yani darboğazdır (Bottleneck). Kısıtlar Teorisi'ne (TOC) göre darboğaz dışındaki hatlarda yapılan iyileştirmeler toplam fabrika çıktısını artırmaz.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Üretim hatlarında toplam çıktı kapasitesini belirleyen unsur, sistemdeki en yavaş çalışan işlem yani darboğazdır (Bottleneck).</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. SMED ile Kalıp Değişim Sürelerinin Düşürülmesi</h4>
           <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">SMED metodolojisiyle iç set-up ve dış set-up işlemleri ayrıştırılarak hazırlık süreleri dakikalar seviyesine indirilebilir.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. MILP ile Otomatik Gantt Çizelgeleme</h4>
@@ -147,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         category: "STOK YÖNETİMİ // ANALİZ 03",
         title: "Stok Devir Hızını Artırırken Stoksuz Kalma Riskini (Stockout) Sıfırlamak",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Stok yönetimi, işletme sermayesinin (Working Capital) kalbidir. Yüksek stok seviyeleri likiditeyi kilitlerken, düşük stok ise müşteri memnuniyetsizliğine yol açar.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Stok yönetimi, işletme sermayesinin (Working Capital) kalbidir.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dinamik Güvenlik Stoğu (Safety Stock) Formülasyonu</h4>
           <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Tedarikçi teslimat süresi değişkenliği ve talep dalgalanmasını dikkate alan istatistiksel güvenlik stoğu formülleri uygulanmalıdır.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matris Analizi</h4>
@@ -162,33 +192,33 @@ document.addEventListener('DOMContentLoaded', () => {
         content: `
           <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Demand forecasting forms the cornerstone of modern supply chain management. Without accurate demand forecasts, production schedules lead either to excessive holding costs (Overstock) or lost sales caused by stockouts.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Statistical Time Series Models</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In traditional time-series analysis, ARIMA and Holt-Winters Exponential Smoothing yield strong results on data with clear seasonality and trends, serving as a baseline forecasting tool.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In traditional time-series analysis, ARIMA and Holt-Winters Exponential Smoothing yield strong results on data with clear seasonality and trends.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Machine Learning Approaches (Prophet & XGBoost)</h4>
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In complex scenarios involving promotions and macroeconomic indicators, models like Facebook Prophet and XGBoost excel at handling missing data and anomaly detection.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In complex scenarios involving promotions and macroeconomic indicators, models like Facebook Prophet and XGBoost excel.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">3. Forecast Performance Measurement (WAPE / MAPE)</h4>
-          <p style="color: #333; line-height: 1.8;">Forecast performance should be evaluated using MAPE and WAPE, targeting WAPE rates below 10% in an optimal system.</p>
+          <p style="color: #333; line-height: 1.8;">Forecast performance should be evaluated using MAPE and WAPE, targeting WAPE rates below 10%.</p>
         `
       },
       "2": {
         category: "PRODUCTION SCHEDULING // ANALYSIS 02",
         title: "Bottleneck Management and SMED in Production Scheduling & Capacity Planning",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In manufacturing lines, total output capacity is governed by the system's slowest operation—the bottleneck. According to Theory of Constraints (TOC), improvements made outside the bottleneck do not increase overall throughput.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">In manufacturing lines, total output capacity is governed by the system's slowest operation—the bottleneck.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Setup Time Reduction via SMED</h4>
           <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Applying Single-Minute Exchange of Die (SMED) separates internal and external setup tasks, reducing changeover times down to single-digit minutes.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. Automated Gantt Scheduling via MILP</h4>
-          <p style="color: #333; line-height: 1.8;">Mixed-Integer Linear Programming (MILP) models automatically optimize job assignments, minimize setup times, and guarantee strict due-date adherence.</p>
+          <p style="color: #333; line-height: 1.8;">Mixed-Integer Linear Programming (MILP) models automatically optimize job assignments and due-date adherence.</p>
         `
       },
       "3": {
         category: "INVENTORY MANAGEMENT // ANALYSIS 03",
         title: "Increasing Inventory Turnover While Eliminating Stockout Risks",
         content: `
-          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Inventory management lies at the heart of corporate finance and working capital optimization. High inventory levels lock up liquidity, whereas understocking damages customer satisfaction.</p>
+          <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Inventory management lies at the heart of corporate finance and working capital optimization.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">1. Dynamic Safety Stock Formulation</h4>
           <p style="margin-bottom: 1.5rem; color: #333; line-height: 1.8;">Dynamic statistical formulas incorporating supplier lead time variance and demand volatility must be applied.</p>
           <h4 style="margin: 2rem 0 0.8rem 0; color: #000; font-size: 1.1rem; text-transform: uppercase; font-weight: 900;">2. ABC - XYZ Matrix Analysis</h4>
-          <p style="color: #333; line-height: 1.8;">Categorizing items by revenue contribution (ABC) and demand predictability (XYZ) enables tailored inventory policies for each product segment.</p>
+          <p style="color: #333; line-height: 1.8;">Categorizing items by revenue contribution (ABC) and demand predictability (XYZ) enables tailored inventory policies.</p>
         `
       }
     }
@@ -219,6 +249,9 @@ document.addEventListener('DOMContentLoaded', () => {
       btnTr.classList.toggle('active', lang === 'tr');
       btnEn.classList.toggle('active', lang === 'en');
     }
+
+    // Recalculate EOQ Results with updated currency symbol
+    calculateEOQ();
   }
 
   // Bind Language Switcher Buttons
@@ -228,8 +261,166 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnTr) btnTr.addEventListener('click', () => setLanguage('tr'));
   if (btnEn) btnEn.addEventListener('click', () => setLanguage('en'));
 
-  // Initialize Language
+  // 2. EOQ CALCULATOR ENGINE
+  const inputDemand = document.getElementById('eoq-demand');
+  const inputSetup = document.getElementById('eoq-setup');
+  const inputHolding = document.getElementById('eoq-holding');
+
+  function calculateEOQ() {
+    if (!inputDemand || !inputSetup || !inputHolding) return;
+
+    const D = parseFloat(inputDemand.value) || 0;
+    const S = parseFloat(inputSetup.value) || 0;
+    const H = parseFloat(inputHolding.value) || 0;
+
+    if (D <= 0 || S <= 0 || H <= 0) {
+      document.getElementById('res-eoq').textContent = '-';
+      document.getElementById('res-orders').textContent = '-';
+      document.getElementById('res-cycle').textContent = '-';
+      document.getElementById('res-cost').textContent = '-';
+      return;
+    }
+
+    // EOQ Formula: sqrt((2 * D * S) / H)
+    const eoq = Math.sqrt((2 * D * S) / H);
+    const numOrders = D / eoq;
+    const daysBetweenOrders = 365 / numOrders;
+
+    const totalOrderingCost = numOrders * S;
+    const totalHoldingCost = (eoq / 2) * H;
+    const totalCost = totalOrderingCost + totalHoldingCost;
+
+    const currPrefix = currentLang === 'tr' ? '₺' : '$';
+
+    document.getElementById('res-eoq').textContent = Math.round(eoq).toLocaleString();
+    document.getElementById('res-orders').textContent = numOrders.toFixed(1);
+    document.getElementById('res-cycle').textContent = daysBetweenOrders.toFixed(1);
+    document.getElementById('res-cost').textContent = currPrefix + Math.round(totalCost).toLocaleString();
+
+    // Draw Canvas Graph
+    drawEOQChart(D, S, H, eoq);
+  }
+
+  function drawEOQChart(D, S, H, eoq) {
+    const canvas = document.getElementById('eoq-chart');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    ctx.scale(dpr, dpr);
+
+    const w = rect.width;
+    const h = rect.height;
+    ctx.clearRect(0, 0, w, h);
+
+    if (isNaN(eoq) || eoq <= 0) return;
+
+    const padding = { top: 20, right: 30, bottom: 35, left: 50 };
+    const graphW = w - padding.left - padding.right;
+    const graphH = h - padding.top - padding.bottom;
+
+    const qMin = Math.max(10, eoq * 0.2);
+    const qMax = eoq * 2.2;
+    const minTotalCost = (D / eoq) * S + (eoq / 2) * H;
+    const maxTotalCost = minTotalCost * 2.2;
+
+    function toX(q) {
+      return padding.left + ((q - qMin) / (qMax - qMin)) * graphW;
+    }
+    function toY(cost) {
+      return padding.top + graphH - (cost / maxTotalCost) * graphH;
+    }
+
+    // Grid Base Lines
+    ctx.strokeStyle = '#e5e5e5';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(padding.left, padding.top + graphH);
+    ctx.lineTo(padding.left + graphW, padding.top + graphH);
+    ctx.moveTo(padding.left, padding.top);
+    ctx.lineTo(padding.left, padding.top + graphH);
+    ctx.stroke();
+
+    // 1. Holding Cost Line (Dashed Gray)
+    ctx.setLineDash([4, 4]);
+    ctx.strokeStyle = '#888888';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for (let step = 0; step <= 50; step++) {
+      const q = qMin + (step / 50) * (qMax - qMin);
+      const holdingCost = (q / 2) * H;
+      const x = toX(q);
+      const y = toY(holdingCost);
+      if (step === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // 2. Ordering Cost Line (Dashed Light Gray)
+    ctx.setLineDash([4, 4]);
+    ctx.strokeStyle = '#aaaaaa';
+    ctx.beginPath();
+    for (let step = 0; step <= 50; step++) {
+      const q = qMin + (step / 50) * (qMax - qMin);
+      const orderingCost = (D / q) * S;
+      const x = toX(q);
+      const y = Math.max(padding.top, toY(orderingCost));
+      if (step === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // 3. Total Cost Curve (Solid Thick Black Line)
+    ctx.setLineDash([]);
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (let step = 0; step <= 50; step++) {
+      const q = qMin + (step / 50) * (qMax - qMin);
+      const totalCost = (D / q) * S + (q / 2) * H;
+      const x = toX(q);
+      const y = Math.max(padding.top, toY(totalCost));
+      if (step === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // 4. Vertical Marker at EOQ Point
+    const eoqX = toX(eoq);
+    const eoqY = toY(minTotalCost);
+
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 3]);
+    ctx.beginPath();
+    ctx.moveTo(eoqX, padding.top + graphH);
+    ctx.lineTo(eoqX, eoqY);
+    ctx.stroke();
+
+    // EOQ Point Marker Circle
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#000000';
+    ctx.beginPath();
+    ctx.arc(eoqX, eoqY, 5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // X Axis Label
+    ctx.font = '10px -apple-system, sans-serif';
+    ctx.fillStyle = '#111111';
+    ctx.fillText('EOQ = ' + Math.round(eoq).toLocaleString(), eoqX - 25, padding.top + graphH + 20);
+  }
+
+  // Attach EOQ Input Listeners
+  if (inputDemand) inputDemand.addEventListener('input', calculateEOQ);
+  if (inputSetup) inputSetup.addEventListener('input', calculateEOQ);
+  if (inputHolding) inputHolding.addEventListener('input', calculateEOQ);
+
+  // Initialize Language & Initial EOQ Calculation
   setLanguage(currentLang);
+  window.addEventListener('resize', calculateEOQ);
 
   // Article Reader Modal Logic
   const modal = document.getElementById('article-modal');
