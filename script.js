@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR & EN I18N + EOQ)
+   BLACKROCK MONOCHROME CORPORATE INTERACTIVE LOGIC (TR & EN I18N + EOQ + TOPICS)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tr: {
       brand_sub: "// ENDÜSTRİ & PLANLAMA",
       nav_approach: "YAKLAŞIM",
+      nav_topics: "CORE TOPICS",
       nav_expertise: "UZMANLIK",
       nav_eoq: "EOQ HESAPLAYICI",
       nav_publications: "ANALİZLER",
@@ -20,6 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
       metric_1: "ZAMANINDA TESLİMAT GÜVENİLİRLİĞİ (OTIF)",
       metric_2: "ATIL STOK TUTMA MALİYETİ AZALTIMI",
       metric_3: "KAPASİTE KULLANIMI & OEE ARTIŞI",
+      top_kicker: "MÜHENDİSLİK MÜFREDATI & AKADEMİK MODÜLLER",
+      top_title: "CORE TOPICS // ANA KONU BAŞLIKLARI",
+      top_1_num: "MODULE 01 // FORECASTING",
+      top_1_title: "TALEP TAHMİNİ & ZAMAN SERİLERİ ANALİZİ",
+      top_1_body: "ARIMA, Prophet ve Üstel Düzeltme modelleriyle trend ve mevsimsellik ayrıştırması, WAPE/MAPE tahmin hata analizleri.",
+      top_2_num: "MODULE 02 // SCHEDULING",
+      top_2_title: "KAPASİTE & ÜRETİM ÇİZELGELEME",
+      top_2_body: "MPS/MRP mimarisi, Kısıtlar Teorisi (TOC) ile darboğaz yönetimi, SMED kalıp değişim ve MILP matematiksel sıralama.",
+      top_3_num: "MODULE 03 // INVENTORY",
+      top_3_title: "STOK TEORİSİ & GÜVENLİK STOĞU",
+      top_3_body: "EOQ modelleri, dinamik Güvenlik Stoğu (Safety Stock), Reorder Point (ROP) ve ABC-XYZ matris yönetimi.",
+      top_4_num: "MODULE 04 // GOVERNANCE",
+      top_4_title: "S&OP & TEDARİK ZİNCİRİ YÖNETİŞİMİ",
+      top_4_body: "Aylık S&OP toplantı döngüsü, talep-arz dengeleme, Senaryo Analizi (What-If) ve işletme sermayesi optimizasyonu.",
       exp_kicker: "DANIŞMANLIK & OPERASYONEL ALANLAR",
       exp_title: "UZMANLIK ALANLARI",
       exp_1_num: "01 // TALEP PLANLAMA",
@@ -78,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     en: {
       brand_sub: "// INDUSTRIAL ENGINEERING & PLANNING",
       nav_approach: "APPROACH",
+      nav_topics: "CORE TOPICS",
       nav_expertise: "EXPERTISE",
       nav_eoq: "EOQ CALCULATOR",
       nav_publications: "PUBLICATIONS",
@@ -89,6 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
       metric_1: "ON-TIME IN-FULL DELIVERY RELIABILITY (OTIF)",
       metric_2: "DEAD STOCK & HOLDING COST REDUCTION",
       metric_3: "CAPACITY UTILIZATION & OEE ENHANCEMENT",
+      top_kicker: "ENGINEERING CURRICULUM & CORE MODULES",
+      top_title: "CORE TOPICS // PRIMARY SUBJECT MODULES",
+      top_1_num: "MODULE 01 // FORECASTING",
+      top_1_title: "DEMAND FORECASTING & TIME SERIES ANALYSIS",
+      top_1_body: "Trend and seasonality decomposition via ARIMA, Prophet, and Exponential Smoothing; WAPE/MAPE error analytics.",
+      top_2_num: "MODULE 02 // SCHEDULING",
+      top_2_title: "CAPACITY & PRODUCTION SCHEDULING",
+      top_2_body: "MPS/MRP architecture, Bottleneck management via Theory of Constraints (TOC), SMED changeovers, and MILP sequencing.",
+      top_3_num: "MODULE 03 // INVENTORY",
+      top_3_title: "INVENTORY THEORY & SAFETY STOCK",
+      top_3_body: "EOQ mathematical models, dynamic Safety Stock, Reorder Point (ROP) equations, and ABC-XYZ inventory matrix policy.",
+      top_4_num: "MODULE 04 // GOVERNANCE",
+      top_4_title: "S&OP & SUPPLY CHAIN GOVERNANCE",
+      top_4_body: "Monthly S&OP executive cycle, demand-supply balancing, What-If scenario simulations, and working capital optimization.",
       exp_kicker: "CONSULTING & OPERATIONAL AREAS",
       exp_title: "EXPERTISE AREAS",
       exp_1_num: "01 // DEMAND PLANNING",
