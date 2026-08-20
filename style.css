@@ -76,6 +76,12 @@ body {
   letter-spacing: 0.05em;
 }
 
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
 .nav-menu {
   display: flex;
   gap: 2.5rem;
@@ -96,6 +102,42 @@ body {
 
 .nav-link:hover {
   border-color: var(--black);
+}
+
+/* Language Switcher Button Group */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--mid-gray);
+  cursor: pointer;
+  padding: 2px 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: var(--black);
+}
+
+.lang-btn.active {
+  color: var(--black);
+  border-color: var(--black);
+}
+
+.lang-divider {
+  color: var(--light-gray);
 }
 
 /* Hero Section (Black & White Contrast) */

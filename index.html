@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SEMİH // Industrial Engineering & Operational Planning</title>
-  <meta name="description" content="Data-driven engineering portal for demand forecasting, production scheduling, inventory optimization, and S&OP frameworks.">
-  <meta name="keywords" content="industrial engineering, demand planning, production scheduling, S&OP, inventory optimization, BlackRock corporate monochrome">
+  <title>SEMİH // Endüstri Mühendisliği & Operasyonel Planlama</title>
+  <meta name="description" content="Talep tahminleme, üretim planlama, stok optimizasyonu ve S&OP süreçleri için veriye dayalı mühendislik portalı.">
+  <meta name="keywords" content="endüstri mühendisliği, talep planlama, üretim çizelgeleme, S&OP, stok optimizasyonu, BlackRock corporate monochrome">
   <meta name="author" content="Semih">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▪️</text></svg>">
@@ -18,28 +18,37 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="#" class="brand-logo">
-        SEMİH <span>// INDUSTRIAL ENGINEERING & PLANNING</span>
+        SEMİH <span data-i18n="brand_sub">// ENDÜSTRİ & PLANLAMA</span>
       </a>
 
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#approach" class="nav-link">APPROACH</a></li>
-          <li><a href="#expertise" class="nav-link">EXPERTISE</a></li>
-          <li><a href="#publications" class="nav-link">PUBLICATIONS</a></li>
-          <li><a href="#biography" class="nav-link">BIOGRAPHY</a></li>
-          <li><a href="#contact" class="nav-link">CONTACT</a></li>
-        </ul>
-      </nav>
+      <div class="nav-wrapper">
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#approach" class="nav-link" data-i18n="nav_approach">YAKLAŞIM</a></li>
+            <li><a href="#expertise" class="nav-link" data-i18n="nav_expertise">UZMANLIK</a></li>
+            <li><a href="#publications" class="nav-link" data-i18n="nav_publications">ANALİZLER</a></li>
+            <li><a href="#biography" class="nav-link" data-i18n="nav_biography">BİYOGRAFİ</a></li>
+            <li><a href="#contact" class="nav-link" data-i18n="nav_contact">İLETİŞİM</a></li>
+          </ul>
+        </nav>
+
+        <!-- Language Switcher Buttons -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="tr" id="btn-tr">TR</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero-section" id="approach">
     <div class="container">
-      <span class="hero-label">OPERATIONAL EXCELLENCE & SUPPLY CHAIN ARCHITECTURE</span>
-      <h1 class="hero-heading">DEMAND CONTROL AND PRODUCTION SCHEDULING. INDUSTRIAL PLANNING AND OPTIMIZATION.</h1>
-      <p class="hero-description">
-        Delivering data-driven engineering solutions across Demand Forecasting, Master Production Scheduling (MPS/MRP), and Sales & Operations Planning (S&OP) in complex manufacturing and logistics ecosystems.
+      <span class="hero-label" data-i18n="hero_label">OPERASYONEL MÜKEMMELLİK & TEDARİK ZİNCİRİ MİMARİSİ</span>
+      <h1 class="hero-heading" data-i18n="hero_title">TALEP KONTROLÜ VE ÜRETİM ÇİZELGELEME. ENDÜSTRİYEL PLANLAMA VE OPTİMİZASYON.</h1>
+      <p class="hero-description" data-i18n="hero_desc">
+        Karmaşık imalat ve lojistik ekosistemlerinde Talep Tahminleme, Ana Üretim Çizelgeleme (MPS/MRP) ve Satış & Operasyon Planlaması (S&OP) süreçlerinde veriye dayalı mühendislik çözümleri sunuyoruz.
       </p>
     </div>
   </section>
@@ -48,16 +57,16 @@
   <div class="metric-strip">
     <div class="container metric-grid">
       <div class="metric-card">
-        <div class="metric-val">98.4%</div>
-        <div class="metric-desc">ON-TIME IN-FULL DELIVERY RELIABILITY (OTIF)</div>
+        <div class="metric-val">%98.4</div>
+        <div class="metric-desc" data-i18n="metric_1">ZAMANINDA TESLİMAT GÜVENİLİRLİĞİ (OTIF)</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">-30%</div>
-        <div class="metric-desc">DEAD STOCK & HOLDING COST REDUCTION</div>
+        <div class="metric-val">-%30</div>
+        <div class="metric-desc" data-i18n="metric_2">ATIL STOK TUTMA MALİYETİ AZALTIMI</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">+22%</div>
-        <div class="metric-desc">CAPACITY UTILIZATION & OEE ENHANCEMENT</div>
+        <div class="metric-val">+%22</div>
+        <div class="metric-desc" data-i18n="metric_3">KAPASİTE KULLANIMI & OEE ARTIŞI</div>
       </div>
     </div>
   </div>
@@ -65,45 +74,45 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Expertise Section -->
+    <!-- Uzmanlık Alanları -->
     <section class="content-section" id="expertise">
       <div class="container">
         <div class="section-head">
-          <span class="section-kicker">CONSULTING & OPERATIONAL AREAS</span>
-          <h2 class="section-main-title">EXPERTISE AREAS</h2>
+          <span class="section-kicker" data-i18n="exp_kicker">DANIŞMANLIK & OPERASYONEL ALANLAR</span>
+          <h2 class="section-main-title" data-i18n="exp_title">UZMANLIK ALANLARI</h2>
         </div>
 
         <div class="grid-4">
           
           <div class="bw-card">
-            <div class="bw-card-num">01 // DEMAND PLANNING</div>
-            <h3 class="bw-card-title">DEMAND FORECASTING & STATISTICAL MODELS</h3>
-            <p class="bw-card-body">
-              SKU-level time-series modeling (ARIMA, Prophet, XGBoost) accounting for seasonality, trend, and forecast accuracy (WAPE) optimization.
+            <div class="bw-card-num" data-i18n="exp_1_num">01 // TALEP PLANLAMA</div>
+            <h3 class="bw-card-title" data-i18n="exp_1_title">TALEP TAHMİNLEME & İSTATİSTİKSEL MODELLER</h3>
+            <p class="bw-card-body" data-i18n="exp_1_body">
+              SKU seviyesinde geçmiş veriler, mevsimsellik ve trendlerin zaman serisi (ARIMA, Prophet, XGBoost) algoritmalarıyla modellenmesi ve tahmin doğruluğu (WAPE) optimizasyonu.
             </p>
           </div>
 
           <div class="bw-card">
-            <div class="bw-card-num">02 // PRODUCTION SCHEDULING</div>
-            <h3 class="bw-card-title">PRODUCTION SCHEDULING & CAPACITY ARCHITECTURE</h3>
-            <p class="bw-card-body">
-              MILP mathematical optimization models for multi-line facilities to minimize changeover (SMED) times, balance machine workloads, and satisfy due dates.
+            <div class="bw-card-num" data-i18n="exp_2_num">02 // ÜRETİM ÇİZELGELEME</div>
+            <h3 class="bw-card-title" data-i18n="exp_2_title">ÜRETİM ÇİZELGELEME & KAPASİTE MİMARİSİ</h3>
+            <p class="bw-card-body" data-i18n="exp_2_body">
+              Çok hatlı üretim tesislerinde kalıp değişim (SMED) sürelerini minimize eden, makine yüklerini dengeleyen ve teslim tarihlerine sadık kalan MILP matematiksel çizelgeleme modelleri.
             </p>
           </div>
 
           <div class="bw-card">
-            <div class="bw-card-num">03 // INVENTORY OPTIMIZATION</div>
-            <h3 class="bw-card-title">INVENTORY THEORY & SAFETY STOCK</h3>
-            <p class="bw-card-body">
-              Dynamic Safety Stock and Reorder Point (ROP) calculation accounting for lead time variance and demand volatility to eliminate stockouts.
+            <div class="bw-card-num" data-i18n="exp_3_num">03 // STOK OPTİMİZASYONU</div>
+            <h3 class="bw-card-title" data-i18n="exp_3_title">STOK TEORİSİ & GÜVENLİK STOĞU</h3>
+            <p class="bw-card-body" data-i18n="exp_3_body">
+              Tedarik süreleri (Lead Time) ve talep dalgalanmalarına göre dinamik Güvenlik Stoğu (Safety Stock) ve Yeniden Sipariş Noktası (ROP) hesaplamaları ile stok krizlerinin önlenmesi.
             </p>
           </div>
 
           <div class="bw-card">
-            <div class="bw-card-num">04 // S&OP INTEGRATION</div>
-            <h3 class="bw-card-title">SALES & OPERATIONS PLANNING (S&OP)</h3>
-            <p class="bw-card-body">
-              Designing monthly executive S&OP governance and decision-support frameworks aligning Sales, Production, Procurement, and Finance.
+            <div class="bw-card-num" data-i18n="exp_4_num">04 // S&OP ENTEGRASYONU</div>
+            <h3 class="bw-card-title" data-i18n="exp_4_title">S&OP (SATIŞ VE OPERASYON PLANLAMASI)</h3>
+            <p class="bw-card-body" data-i18n="exp_4_body">
+              Satış, Üretim, Satın Alma ve Finans birimleri arasında ortak işletme hedeflerinin belirlendiği aylık S&OP yönetişim ve karar destek mekanizmasının kurulması.
             </p>
           </div>
 
@@ -111,39 +120,39 @@
       </div>
     </section>
 
-    <!-- Publications Section -->
+    <!-- Yayınlar & Analizler -->
     <section class="content-section" id="publications">
       <div class="container">
         <div class="section-head">
-          <span class="section-kicker">TECHNICAL ANALYSIS & INSIGHTS</span>
-          <h2 class="section-main-title">PUBLICATIONS & INSIGHTS</h2>
+          <span class="section-kicker" data-i18n="pub_kicker">TEKNİK ANALİZLER & İNCELEMELER</span>
+          <h2 class="section-main-title" data-i18n="pub_title">YAYINLAR & ANALİZLER</h2>
         </div>
 
         <div>
           
           <div class="pub-item read-article-trigger" data-article="1">
-            <div class="pub-tag">DEMAND PLANNING // 01</div>
+            <div class="pub-tag" data-i18n="pub_1_tag">TALEP PLANLAMA // 01</div>
             <div>
-              <h3 class="pub-title">Demand Forecasting in Industrial Facilities: Statistical Models vs. Machine Learning</h3>
-              <p class="pub-desc">Comparative evaluation of ARIMA, Holt-Winters, and Prophet models for SKU-level demand forecasting and WAPE accuracy measurement.</p>
+              <h3 class="pub-title" data-i18n="pub_1_title">Endüstriyel Tesislerde Talep Tahminleme: İstatistiki Modeller ve Yapay Zeka Yaklaşımları</h3>
+              <p class="pub-desc" data-i18n="pub_1_desc">Zaman serisi analizlerinde ARIMA, Holt-Winters ve Prophet modellerinin SKU bazında karşılaştırılması ve tahmin doğruluğu (WAPE) analizi.</p>
             </div>
             <div class="pub-arrow">→</div>
           </div>
 
           <div class="pub-item read-article-trigger" data-article="2">
-            <div class="pub-tag">PRODUCTION SCHEDULING // 02</div>
+            <div class="pub-tag" data-i18n="pub_2_tag">ÜRETİM ÇİZELGELEME // 02</div>
             <div>
-              <h3 class="pub-title">Bottleneck Management and SMED in Production Scheduling & Capacity Planning</h3>
-              <p class="pub-desc">Minimizing setup times in multi-product manufacturing lines using Theory of Constraints (TOC) and MILP optimization.</p>
+              <h3 class="pub-title" data-i18n="pub_2_title">Kapasite ve Üretim Çizelgelemede Darboğaz (Bottleneck) Yönetimi ve SMED</h3>
+              <p class="pub-desc" data-i18n="pub_2_desc">Çok ürünlü imalat hatlarında makine hazırlık sürelerinin minimizasyonu, kısıtlar teorisi (TOC) ve MILP optimizasyonu uygulamaları.</p>
             </div>
             <div class="pub-arrow">→</div>
           </div>
 
           <div class="pub-item read-article-trigger" data-article="3">
-            <div class="pub-tag">INVENTORY MANAGEMENT // 03</div>
+            <div class="pub-tag" data-i18n="pub_3_tag">STOK YÖNETİMİ // 03</div>
             <div>
-              <h3 class="pub-title">Increasing Inventory Turnover While Eliminating Stockout Risks</h3>
-              <p class="pub-desc">Analyzing lead time variance and demand volatility impact on dynamic Safety Stock and Reorder Point (ROP) equations.</p>
+              <h3 class="pub-title" data-i18n="pub_3_title">Stok Devir Hızını Artırırken Stoksuz Kalma Riskini (Stockout) Sıfırlamak</h3>
+              <p class="pub-desc" data-i18n="pub_3_desc">Dinamik Güvenlik Stoğu (Safety Stock) ve Yeniden Sipariş Noktası (ROP) hesaplamalarında değişken tedarik sürelerinin (Lead Time) etkisi.</p>
             </div>
             <div class="pub-arrow">→</div>
           </div>
@@ -152,56 +161,56 @@
       </div>
     </section>
 
-    <!-- Executive Biography Section -->
+    <!-- Executive Biyografi -->
     <section class="content-section" id="biography">
       <div class="container">
         <div class="bio-wrapper">
-          <h2 class="bio-heading">EXECUTIVE BIOGRAPHY // SEMİH</h2>
-          <p class="bio-text">
-            Specializing in Industrial Engineering principles, Complex Manufacturing Systems, Sales & Operations Planning (S&OP), Master Production Scheduling (MPS), and Material Requirements Planning (MRP).
+          <h2 class="bio-heading" data-i18n="bio_title">EXECUTIVE BIOGRAPHY // SEMİH</h2>
+          <p class="bio-text" data-i18n="bio_p1">
+            Endüstri Mühendisliği disiplini çerçevesinde; Karmaşık İmalat Sistemleri, Satış ve Operasyon Planlaması (S&OP), Ana Üretim Çizelgeleme (MPS) ve Malzeme Gereksinim Planlaması (MRP) konularında uzmanlaşmış bir mühendisim.
           </p>
-          <p class="bio-text">
-            Replacing heuristic planning methods with Mathematical Optimization (Operations Research), Statistical Time Series, and Machine Learning algorithms to minimize inventory holding costs and maximize operational throughput.
+          <p class="bio-text" data-i18n="bio_p2">
+            Geleneksel sezgisel planlama yöntemleri yerine; Matematiksel Optimizasyon (Yöneylem Araştırması), İstatistiksel Zaman Serileri ve Makine Öğrenmesi algoritmalarını iş süreçlerine entegre ederek işletmelerin stok tutma maliyetlerini düşürmekte ve operasyonel verimliliklerini maksimuma çıkarmaktayım.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- İletişim Formu -->
     <section class="content-section" id="contact">
       <div class="container grid-2">
         <div>
-          <span class="section-kicker">CORPORATE INQUIRIES</span>
-          <h2 class="section-main-title">GET IN TOUCH</h2>
-          <p style="color: var(--mid-gray); margin-top: 1.5rem; line-height: 1.8;">
-            Reach out for industrial planning projects, S&OP consulting engagements, or corporate evaluations.
+          <span class="section-kicker" data-i18n="contact_kicker">KURUMSAL İLETİŞİM</span>
+          <h2 class="section-main-title" data-i18n="contact_title">İLETİŞİME GEÇİN</h2>
+          <p style="color: var(--mid-gray); margin-top: 1.5rem; line-height: 1.8;" data-i18n="contact_desc">
+            Planlama projeleri, S&OP danışmanlığı veya kurumsal değerlendirmeler için doğrudan iletişim kurabilirsiniz.
           </p>
           <div style="margin-top: 2.5rem;">
-            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid-gray);">EMAIL</p>
+            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid-gray);" data-i18n="contact_email_label">E-POSTA</p>
             <p style="font-size: 1.15rem; font-weight: 900; margin-bottom: 1.5rem;">semih.planlama@gmail.com</p>
 
-            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid-gray);">LOCATION</p>
-            <p style="font-size: 1.15rem; font-weight: 900;">Istanbul / Turkey</p>
+            <p style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid-gray);" data-i18n="contact_loc_label">LOKASYON</p>
+            <p style="font-size: 1.15rem; font-weight: 900;" data-i18n="contact_loc_val">İstanbul / Türkiye</p>
           </div>
         </div>
 
         <form class="bw-form" id="contact-form">
           <div class="form-field">
-            <label class="form-label" for="name">FULL NAME / CORPORATE ENTITY</label>
+            <label class="form-label" for="name" data-i18n="form_name_label">AD SOYAD / KURUMSAL FİRMA</label>
             <input type="text" id="name" class="form-input" required>
           </div>
 
           <div class="form-field">
-            <label class="form-label" for="email">EMAIL ADDRESS</label>
+            <label class="form-label" for="email" data-i18n="form_email_label">E-POSTA ADRESİ</label>
             <input type="email" id="email" class="form-input" required>
           </div>
 
           <div class="form-field">
-            <label class="form-field-label form-label" for="message">INQUIRY OR PROJECT DETAILS</label>
+            <label class="form-label" for="message" data-i18n="form_msg_label">TALEBİNİZ VEYA PROJE DETAYI</label>
             <textarea id="message" class="form-textarea" required></textarea>
           </div>
 
-          <button type="submit" class="submit-btn">SUBMIT</button>
+          <button type="submit" class="submit-btn" data-i18n="form_submit">GÖNDER</button>
         </form>
       </div>
     </section>
@@ -211,8 +220,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
-      <div>© <span id="year"></span> SEMİH // INDUSTRIAL ENGINEERING & OPERATIONAL PLANNING</div>
-      <div>ALL RIGHTS RESERVED.</div>
+      <div>© <span id="year"></span> <span data-i18n="footer_text">SEMİH // ENDÜSTRİ MÜHENDİSLİĞİ & OPERASYONEL PLANLAMA. TÜM HAKLARI SAKLIDIR.</span></div>
     </div>
   </footer>
 
